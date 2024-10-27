@@ -1,0 +1,1151 @@
+/* Styles globaux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    width: 100%;
+    height: 100%;
+  }
+  
+  body, .menu {  /* Police par défaut pour tout le contenu */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+  }
+  
+  p {  /* Styles par défaut pour les paragraphes */
+    font-weight: 300;
+    color: #111;
+  }
+  
+  /* Styles pour le header */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .logo img {
+    width: 100px;
+    margin-bottom: -20px;
+  }
+  
+  .logo-slogan-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px; /* Ajuster la marge si nécessaire */
+  }
+  
+  .slogan p {
+    font-family: 'Lucida Handwriting', cursive;
+    font-size: 18px;
+    color: #008000;
+    text-align: center;
+    margin: -50px 0 0 0; /* Adjust margin to center under logo */
+    display: inline-block;
+    white-space: nowrap;
+  }
+  
+  /* Menu Toggle Styles */
+  .menuToggle {
+    display: none; /* Hidden initially for large screens */
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1002;
+    color: #111;
+    border: none;
+    background: none;
+    padding: 0;
+  }
+  
+  .menuToggle span.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin-bottom: 5px;
+    background-color: #111;
+  }
+  
+  /* Default Navbar Styles (Large Screens) */
+  .navbar {
+    display: flex;
+  }
+  
+  .navbar li {
+    list-style: none;
+    margin-left: 30px;
+  }
+  
+  .navbar a {
+    color: #008000;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  
+  .btn-reserve {
+    padding: 10px 20px;
+    background: #fb911f;
+    margin-top: -10px;
+    text-transform: uppercase;
+  }
+  
+  .btn-reserve:hover {
+    background: #d87710;
+    transition: ease-out;
+  }
+  
+  header .navbar li a:hover {
+    color: #fb911f;
+    border-bottom: 2px solid #fb911f;
+  }
+  
+  /* Responsive Navbar Styles (Small Screens) */
+  @media (max-width: 768px) {
+    header {
+      height: auto; /* Allow header to grow as needed */
+    }
+
+    body, .menu {
+        font-family: 'Montserrat', sans-serif; /* Replace with your chosen font */
+      }      
+  
+    .logo-slogan-container {
+      flex-direction: row; /* Arrange logo and slogan side-by-side */
+      align-items: flex-start; /* Align items at the top */
+      margin-right: 0; /* Remove right margin */
+    }
+  
+    .slogan p {
+      margin: 0; /* Reset margin */
+    }
+  
+    .navbar {
+      display: flex; /* Keep flexbox for small screens */
+      flex-direction: column; /* Stack items vertically */
+      position: absolute; /* Position off-screen initially */
+      top: 100px; /* Push menu below header */
+      left: 0;
+      width: 200px; /* Adjust width as needed */
+      background: #fff; /* Set background color */
+      transform: translateX(-100%); /* Hide menu by default */
+      transition: transform 0.3s ease-in-out; /* Add transition for smooth animation */
+    }
+  
+    .navbar li {
+      padding: 10px; /* Add padding for spacing */
+    }
+  
+    .navbar.show {
+      transform: translateX(0); /* Show menu when active */
+    }
+  
+    /* Show menu toggle button on small screens */
+    .menuToggle {
+      display: block;
+      position: fixed; /* Fix position for better visibility */
+      top: 20px; /* Adjust as needed */
+      left: 20px; /* Adjust as needed */
+      z-index: 1001; /* Ensure it's above other elements */
+      cursor: pointer;
+    }
+  
+    .menuToggle span.bar {
+      display: block;
+      width: 20px; /* Adjust width as needed */
+      height: 3px;
+      margin-bottom: 5px;
+      background-color: #111;
+    }
+
+    body, .menu {
+        font-family: 'Montserrat', sans-serif; /* Montserrat font for responsive menu */    
+  }
+} 
+
+/* Styles généraux pour les langues */
+.lang-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0 5px;
+}
+
+.lang-btn img {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 1px solid #06842c;
+}
+
+/* Styles généraux pour tous les paragraphes */
+p {
+  margin-top: 1em;  /* Ajoute un espace en haut du paragraphe */
+  margin-bottom: 1em;  /* Ajoute un espace en bas du paragraphe */
+  display: block;  /* Assure que le paragraphe est traité comme un bloc */
+  text-align: justify;
+  text-justify: inter-word;  /* Assure une justification plus propre entre les mots */
+}
+
+/* Styles pour la vidéo */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 1500px; /* Ajustez la largeur maximale selon vos besoins */
+    margin: 0 auto; /* Pour centrer la vidéo horizontalement */
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+}
+
+/* Styles de base pour le paragraphe sur la vidéo */
+.banniere {
+    margin-top: 20px;
+    width: 100%;
+    height: 90vh; /* Augmentez la hauteur pour une visibilité accrue */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Aligne les éléments en haut */
+    position: relative;
+    overflow: hidden; /* Pour s'assurer que la vidéo ou les images ne débordent pas */
+}
+
+.banniere h1, h2, 
+.banniere p {
+    color: white; /* Couleur du texte */
+    font-size: 24px; /* Ajustez la taille du texte selon vos besoins */
+    font-weight: bold; /* Si nécessaire */
+    text-align: center; /* Centrer le texte */
+    padding: 10px; /* Ajoutez un peu d'espace autour du texte */
+    text-shadow: 
+        -1px -1px 0 #000, 
+        1px -1px 0 #000, 
+        -1px 1px 0 #000, 
+        1px 1px 0 #000; /* Crée un contour noir de 2px autour du texte */
+        letter-spacing: 2px; /* Augmente l'espace entre les caractères */
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Pour que la vidéo couvre entièrement le conteneur */
+}
+
+.banniere .contenu {
+    position: absolute;
+    z-index: 2;
+    color: #fff; /* Assure la visibilité et la couleur du texte */
+    width: 50%;
+    text-align: center;
+    padding: 20px; /* Ajoute un peu de padding pour une meilleure lisibilité */
+}
+
+.banniere .contenu h2 {
+    color: #fff;
+    font-size: 2.5em;  /* Ajuste la taille des caractaire du titre */
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.banniere .contenu p:nth-child(2) {
+    color: #fff;
+    font-size: 1.3em; /* Ajuste la taille des caractaire du paragraphe */
+    text-align: justify; /* Aligne le texte à droite pour les très petits écrans */
+}
+
+/* Media queries pour les petits écrans */
+@media (max-width: 768px) {
+    .banniere .contenu {
+        width: 80%; /* Augmente la largeur du contenu pour les petits écrans */
+        text-align: right; /* Aligne le texte à droite pour les petits écrans */
+        padding-top: 20px; /* Ajoute du padding en haut pour séparer le texte de la vidéo */
+    }
+
+    .banniere .contenu h2 {
+        font-size: 2em; /* Réduit la taille du texte pour les petits écrans */
+    }
+
+    .banniere .contenu p:nth-child(2) {
+        font-size: 1em; /* Réduit la taille du texte pour les petits écrans */
+    }
+}
+
+@media (max-width: 480px) {
+    .banniere {
+        height: 25vh; /* Ajuste l'espace entre la vidéo et à propo pour les très petits écrans */
+        margin-top: 100px; /* Ajuste l'espace au dessu de la vidéo pour les très petits écrans */
+    }
+
+    .banniere .contenu {
+        width: 90%; /* Encore plus de largeur pour les très petits écrans */
+        text-align: justify; /* Aligne le texte à droite pour les très petits écrans */
+        padding-top: 15px; /* Ajuste le padding en haut pour les très petits écrans */
+    }
+
+    .banniere .contenu h2 {
+        font-size: 1.5em; /* Réduit encore la taille du texte */
+    }
+
+    .banniere .contenu p:nth-child(2) {
+        font-size: 0.9em; /* Réduit encore la taille du texte */
+    }
+    
+    .slogan p {
+        margin-top: -20px; /* Ajustez la marge pour le pousser plus en haut */
+        font-size: 22px;
+        white-space: nowrap;      /* Empêche le texte de passer à la ligne suivante */
+    }
+
+    .logo img {
+        width: 70px;
+        height: auto;
+    }
+}
+
+.banniere {
+    margin-bottom: 20px; /* Ajustez cette marge pour réduire l'espace */
+}
+
+.apropos {
+    margin-top: 20px; /* Ajustez cette marge pour réduire l'espace */
+}
+
+.apropos .titre-texte span{
+  color: #fb911f;
+  font-size: 2em;
+}
+
+@media (max-width: 480px)
+{
+    .row {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Début Délégués */
+.expert-card {
+    width: 300px; /* Définir la largeur fixe des cartes */
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-right: 10px; /* Ajouter une marge entre les cartes */
+}
+
+/* Section styling */
+section {
+    padding: 100px;
+}
+
+.row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row .col50 {
+    position: relative;
+    width: 48%;
+    justify-content: center;
+    align-items: center;
+}
+
+.row .col50 h2 {
+    margin-bottom: 20px;
+    color: #008000;
+}
+
+.menu .titre .titre-texte {
+  color: #008000; /*Couleur du titre de Nos produits */
+}
+
+.titre-texte {
+    color: #000;
+    font-size: 2em;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.titre-texte span {
+    color: #fb911f;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.row .col50 img {
+    height: 450px;
+    width: 600px;
+    position: relative;
+}
+
+.titre {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu {
+    margin-top: -100px;
+}
+
+.menu .contenu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.menu .contenu .box {
+    width: 400px; /* Largeur box images Nos Produits */
+    margin: 50px; /* Espace entre box images Nos Produits */
+    border: 0px solid #fff; /* Espace entre la bordure des box et les images */
+    box-shadow: 20px 15px 35px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition douce pour transform et shadow */
+    cursor: pointer; /* Change le curseur pour indiquer qu'il est interactif */
+}
+
+/* Effet de survol sur .box */
+.menu .contenu .box:hover {
+    transform: translateY(-10px); /* Déplace légèrement l'élément vers le haut */
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.9); /* Ombre plus prononcée pour un effet de profondeur */
+}
+
+.menu .contenu .box .imbox {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.menu .contenu .box .imbox img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.menu .contenu .box .text {
+    text-align: center;
+    font-weight: 300;
+    color: #111; /* Couleur des titres des produits */
+}
+
+.menu .contenu .box .text h3 {
+    font-weight: 400;
+}
+
+/* Styles globaux et autres styles de section */
+.expert .titre .titre-texte {
+  color: #008000; /*Couleur du titre Nos délégués */
+}
+
+.expert .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.expert .swiper-slide img {
+    width: auto; /* Ajustez selon les besoins */
+    flex-shrink: 0; /* Empêche les slides de rétrécir si l'espace est insuffisant */
+    height: 250px;
+    border-radius: 8%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.expert-photo {
+    border: 3px solid #008000;
+}
+
+.swiper-slide {
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: box-shadow 0.3s;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.swiper-slide:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.9);
+}
+
+.expert-card {
+    width: 100%;
+    text-align: center;
+}
+
+.expert-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.expert-info h3, .expert-info p {
+    margin: 5px 0;
+}
+
+.contact-icons img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%; /* rend l'icône circulaire */
+    background-color: #e0e0e0; /* couleur de fond */
+    padding: 0px; /* espace autour de l'icône */
+}
+
+.contact-icons a {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.contact-icons a:hover {
+    color: #0056b3;
+}
+/* Fin Section Délégués */
+/* Début Section Témogniage */
+.temoignage{
+    background-image: url(./images/bg2.jpg);
+    background-size: cover;
+}
+
+.temoignage .contenu{
+    display: flex;
+    margin-top: 40px;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start; /* Aligner les éléments en haut */
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.temoignage .contenu .box{
+    width: 340px;
+    margin: 20px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 40px;
+}
+
+.temoignage .contenu .box .imbox{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border: 2px solid #008000;
+}
+
+.temoignage .contenu .box .imbox img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.temoignage .contenu .box .text{
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+.temoignage .contenu .box .text h3{
+    color: #008000;
+    margin-top: 20px;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.blanc .titre-texte{
+    color: #fff;
+}
+/* Fin section Témoniages */
+/* Début Section Nos Fournisseurs */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1536px;
+  margin-inline: auto;
+  position: relative;
+  height: 110px;
+  margin-top: 2rem;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+@keyframes scrollLeft {
+  to {
+    left: -200px;
+  }
+}
+
+.item {
+  width: 200px;
+  height: 100px;
+  background-color: white;
+  border-radius: 20px;
+  /* border: 2px solid #008000; */
+  position: absolute;
+  left: max(calc(200px * 21), 100%);
+  animation-name: scrollLeft;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.item1 {
+  animation-delay: calc(30s / 21 * (21 - 1) * -1);
+}
+
+.item2 {
+  animation-delay: calc(30s / 21 * (21 - 2) * -1);
+}
+
+.item3 {
+  animation-delay: calc(30s / 21 * (21 - 3) * -1);
+}
+
+.item4 {
+  animation-delay: calc(30s / 21 * (21 - 4) * -1);
+}
+
+.item5 {
+  animation-delay: calc(30s / 21 * (21 - 5) * -1);
+}
+
+.item6 {
+  animation-delay: calc(30s / 21 * (21 - 6) * -1);
+}
+
+.item7 {
+  animation-delay: calc(30s / 21 * (21 - 7) * -1);
+}
+
+.item8 {
+  animation-delay: calc(30s / 21 * (21 - 8) * -1);
+}
+.item9 {
+  animation-delay: calc(30s / 21 * (21 - 9) * -1);
+}
+
+.item10 {
+  animation-delay: calc(30s / 21 * (21 - 10) * -1);
+}
+
+.item11 {
+  animation-delay: calc(30s / 21 * (21 - 11) * -1);
+}
+
+.item12 {
+  animation-delay: calc(30s / 21 * (21 - 12) * -1);
+}
+
+.item13 {
+  animation-delay: calc(30s / 21 * (21 - 13) * -1);
+}
+
+.item14 {
+  animation-delay: calc(30s / 21 * (21 - 14) * -1);
+}
+
+.item15 {
+  animation-delay: calc(30s / 21 * (21 - 15) * -1);
+}
+
+.item16 {
+  animation-delay: calc(30s / 21 * (21 - 16) * -1);
+}
+.item17 {
+  animation-delay: calc(30s / 21 * (21 - 17) * -1);
+}
+
+.item18 {
+  animation-delay: calc(30s / 21 * (21 - 18) * -1);
+}
+
+.item19 {
+  animation-delay: calc(30s / 21 * (21 - 19) * -1);
+}
+
+.item20 {
+  animation-delay: calc(30s / 21 * (21 - 20) * -1);
+}
+
+.item21 {
+  animation-delay: calc(30s / 21 * (21 - 21) * -1);
+}
+
+.item img {
+  width: 100%; /* Permettre aux images de s'adapter à la largeur du conteneur */
+  height: auto; /* Permettre aux images de s'adapter à la hauteur du conteneur */
+}
+/* Fin Section Nos Fournisseurs */
+/* Début Section Contactes */
+.contact .titre .titre-text {
+  color: #008000; /*Couleur du titre Nos délégués */
+}
+
+.blanc .titre-texte,
+.blanc p{
+    color: #fff;
+}
+
+.contact {
+  background-image: url(./images/img-for.jpg);
+  background-size: cover;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8);
+  width: 100%; /* Diminue la largeur à 90% */
+  margin-left: auto; /* Centre le conteneur horizontalement */
+  margin-right: auto; /* Centre le conteneur horizontalement */
+  margin-bottom: 20px; /* Augmente l'espace en bas du conteneur */
+  padding-bottom: 50px; /* Ajoute encore plus d'espace en bas */
+  background-position: unset;
+}
+
+.contactform {
+  padding: 50px 30px;
+  background: #fff;
+  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.8);
+  max-width: 400px;
+  margin-top: 50px; /* Augmente l'espace entre le formulaire et le haut du conteneur */
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contactform .inputboite{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contactform h3{
+  color: #111;
+  font-size: 1.2em; /* Réduit la taille du titre */
+  margin-bottom: 20px; /* Réduit l'espace en dessous du titre */
+}
+
+.contactform .inputboite input,
+.contactform .inputboite textarea{
+    width: 100%;
+    border: 1px solid #555;
+    padding: 10px;
+    color: #111;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    resize: none;
+}
+
+.contactform .inputboite input[type="submit"]{
+    font-size: 1em;
+    font-weight: 700;
+    color: #ffff;
+    background: #fb911f;
+    display: inline-block;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    outline: none;
+    border: none;
+    transition: 0.5s;
+    max-width: 120px;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyright{
+  padding: 3px 40px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 2px 2px 12px rgba(0,0,0, 0.8);
+  width: 100%; /* Réduit la largeur à 90% de l'écran */
+  background-position: unset;
+  margin: 0 auto; /* Centre la section au milieu de l'écran */
+}
+
+.copyright p:nth-child(1){
+  color: #333;
+}
+
+.copyright a {
+  color: #fb911f;
+  text-decoration: none;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.contact .titre-text span{
+    color: #fb911f;
+    font-size: 2em;
+}
+
+@media (max-width: 991px) {
+.navbar{
+    width: 35%;
+    margin-top: 10px;
+}
+    header, 
+header.sticky{
+    padding: 10px 20px;
+}
+
+header .navbar li{
+    margin-left: 0px;
+}
+
+header .navbar li a {
+    text-decoration: none;
+    color: #008000;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.logo-slogan-container {
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin-right: 0; /* Remove right margin */
+  }
+
+  .logo {
+    margin-bottom: 10px; /* Add spacing between logo and slogan */
+  }
+
+  .slogan p {
+    margin: 0; /* Reset default margin */
+    text-align: center; /* Center text horizontally */
+  }
+
+section{
+    padding: 10px;
+}
+
+.row .col50 img{
+    margin-left: 18%;
+}
+
+.contenu p:nth-child(2){
+    font-size: 1.2em;
+}
+.expert{
+    margin-top: 0px;
+}
+
+.menu{
+    margin-top: 0px;
+}
+
+.row{
+    display: flex;
+    flex-direction: column;
+}
+
+.temoignage h2{
+    font-size: 2em;
+    text-align: center;
+}
+
+.temoignage p{
+text-align: center;
+}
+
+.contactform{
+    margin-left: 25%;
+}
+
+    .row .col50 {
+        position: relative;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    
+    }
+
+    .row{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px)
+{
+    .titre-text{
+        color: #000;
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: capitalize;
+    }
+
+    .temoignage h2 
+    {
+        font-size: 2em;
+    }
+
+    .temoignage p{
+        text-align: justify;
+    }
+    
+}
+
+/* Footer Section */
+footer{
+  background: none;
+  color: #fff;
+  padding: 0 0;
+}
+
+.footer_section{
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_section h3{
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.footer_section .footer_logo a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.footer_section .footer_logo img {
+  width: 150px; /* Ajustez cette valeur pour réduire la taille */
+  height: auto; /* Maintient les proportions de l'image */
+}
+
+.footer_section .follow_us i{
+  font-size: 40px; /* Taille des icônes */
+  margin-right: 20px; /* Espacement entre les icônes */    
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #fff; /* Couleur blanche des icônes */
+}
+
+.footer_section .follow_us i:hover{
+  transform: scale(1.3);
+  color: #b1d90e; /* Optionnel : changement de couleur lors du survol */
+}
+
+.footer_section {
+  background-image: url(./images/img-for.jpg);
+  background: #008000;
+  background-size: cover;
+  box-shadow: 2px 2px 12px rgba(0,0,0, 0.8);
+  width: 100%; /* Réduit la largeur à 90% de l'écran */
+  background-position: unset;
+  margin: 10px auto; /* Centre la section au milieu de l'écran */
+}
+
+.footer_section > div {
+  margin: 0px; /* Supprime les marges supplémentaires */
+  padding: 10px; /* Ajustez selon vos besoins pour contrôler l'espace interne */
+}
+
+.footer_section .footer_logo {
+  margin-right: 0; /* Réduit l'espace entre le logo et la prochaine section */
+  margin-left: 100px;
+}
+
+.useful_links {
+  margin-bottom: 0; /* Réduit l'espace sous les liens utiles */
+  margin-right: 100px;
+}
+
+.contact_us {
+  margin-bottom: 0; /* Réduit l'espace sous la section contact */
+}
+
+.follow_us {
+  margin-bottom: 0; /* Supprime l'espace sous la section follow */
+}
+  
+  @media (max-width: 991px) {
+  .navbar{
+      width: 35%;
+      margin-top: 10px;
+  }
+      header, 
+  header.sticky{
+      padding: 10px 20px;
+  }
+  
+  header .navbar li{
+      margin-left: 0px;
+  }
+  
+  header .navbar li a {
+      text-decoration: none;
+      color: #008000;
+      font-size: 1em;
+      font-weight: 300;
+  }
+  
+  .logo-slogan-container {
+      display: flex; /* Use flexbox for centering */
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center items horizontally */
+      margin-right: 0; /* Remove right margin */
+    }
+  
+    .logo {
+      margin-bottom: 10px; /* Add spacing between logo and slogan */
+    }
+  
+    .slogan p {
+      margin: 0; /* Reset default margin */
+      text-align: center; /* Center text horizontally */
+    }
+  
+  section{
+      padding: 10px;
+}
+
+  
+  .row .col50 img{
+      margin-left: 18%;
+  }
+  
+  .contenu p:nth-child(2){
+      font-size: 1.2em;
+  }
+  .expert{
+      margin-top: 0px;
+  }
+  
+  .menu{
+      margin-top: 0px;
+  }
+  
+  .row{
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .temoignage h2{
+      font-size: 2em;
+      text-align: center;
+  }
+  
+  .temoignage p{
+  text-align: center;
+  }
+  
+  .contactform{
+      margin-left: 25%;
+  }
+  
+      .row .col50 {
+          position: relative;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 30px;
+      
+      }
+  
+      .row{
+          flex-direction: column;
+      }
+  }
+  
+  @media (max-width: 480px)
+  {
+      .titre-text{
+          color: #000;
+          font-size: 2rem;
+          font-weight: 300;
+          text-transform: capitalize;
+      }
+  
+      .temoignage h2 
+      {
+          font-size: 2em;
+      }
+  
+      .temoignage p{
+          text-align: justify;
+      }
+      
+  }
+
+  @media (max-width: 768px) {
+    .contact {
+        width: 95%; /* Réduit encore plus la largeur sur petits écrans */
+    }
+    
+    .contactform {
+        max-width: 100%; /* Utilise toute la largeur disponible sur petits écrans */
+        padding: 50px 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact {
+        width: 100%; /* Occupe toute la largeur sur les très petits écrans */
+    }
+
+    .contactform {
+        padding: 30px 15px;
+    }
+}

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pageProduit2.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lien vers la feuille de style de Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!--Lien vers les icones-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Agroseed</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo-slogan-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo">
+            </div>
+            <div class="slogan">
+                <p data-lang-fr="Cultiver le succès ensemble" data-lang-en="Cultivating success together" data-lang-ar="لــنزرع النجــاح معًــا">Cultiver le succès ensemble</p>
+            </div>
+        </div>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html#banniere" data-lang-fr="Accueil" data-lang-en="Home" data-lang-ar="الصفحة الرئيسية">Accueil</a></li>
+                <li><a href="index.html#apropos" data-lang-fr="A propos De Nous" data-lang-en="About Us" data-lang-ar="معلومات عنا">A propos De Nous</a></li>
+                <li><a href="index.html#menu" data-lang-fr="Nos Produits" data-lang-en="Our Products" data-lang-ar="منتجاتنا">Nos Produits</a></li>
+                <li><a href="index.html#expert" data-lang-fr="Nos Délégués" data-lang-en="Our Delegates" data-lang-ar="مندوبينا">Nos Délégués</a></li>
+                <li><a href="index.html#temoignage" data-lang-fr="Temoignage" data-lang-en="Testimonial" data-lang-ar="شهادة">Temoignage</a></li>
+                <li><a href="index.html#contact" data-lang-fr="Contact" data-lang-en="Contact" data-lang-ar="اتصال">Contact</a></li>
+                <li>
+                    <button class="lang-btn" onclick="changeLanguage('fr')">
+                        <img src="images/france-flag.jpg" alt="Français">
+                    </button>
+                    <button class="lang-btn" onclick="changeLanguage('en')">
+                        <img src="images/uk-flag.jpg" alt="English">
+                    </button>
+                    <button class="lang-btn" onclick="changeLanguage('ar')">
+                        <img src="images/algeria-flag.jpg.jpg" alt="العربية">
+                    </button>
+                </li>
+            </ul>
+        </nav>
+        <button class="menuToggle" aria-label="Open Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </header>
+                                  <!--Début du slider -->
+        <div class="swiper-container mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./images/index-slide01.jpg" alt="Slide 1"></div>
+                <div class="swiper-slide"><img src="./images/index-slide02.jpg" alt="Slide 2"></div>
+                <div class="swiper-slide"><img src="./images/index-slide03.jpg" alt="Slide 3"></div>
+            </div>
+            <!-- Ajout des flèches de navigation -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+         <!--Fin du slider -->        
+
+    <!-- Conteneurs des scrollers -->
+    <div class="scroller-container">
+        <div id="categories" class="scroller categories"></div>
+    </div>
+
+    <div class="scroller-container">
+        <div id="subcategories" class="scroller subcategories"></div>
+    </div>
+
+    <div class="scroller-container">
+        <div id="subsubcategories" class="scroller subsubcategories"></div>
+    </div>
+
+</div>
+</div>
+
+<section class="menu" id="menu">
+    <div class="titre">
+        <h2 class="titre-texte" data-lang-fr="Nos Fournisseurs" data-lang-en="Our Suppliers" data-lang-ar="موردينا" style="text-align: center;">
+            <span style="color: #fb911f;">N</span>os Fournisseurs 
+        </h2>
+        <div class="wrapper">
+                <div class="iteme iteme1">
+                    <img src="images/imageF1.jpg" alt="" />
+                </div>
+                <div class="iteme iteme2">
+                    <img src="images/imageF2.jpg" alt="" />
+                </div>
+                <div class="iteme iteme3">
+                    <img src="images/imageF3.jpeg" alt="" />
+                </div>
+                <div class="iteme iteme4">
+                    <img src="images/imageF4.jpg" alt="" />
+                </div>
+                <div class="iteme iteme5">
+                    <img src="images/imageF5.jpg" alt="" />
+                </div>
+                <div class="iteme iteme6">
+                    <img src="images/imageF6.jpg" alt="" />
+                </div>
+                <div class="iteme iteme7">
+                    <img src="images/imageF7.png" alt="" />
+                </div>
+                <div class="iteme iteme8">
+                    <img src="images/imageF8.jpg" alt="" />
+                </div>
+                <div class="iteme iteme9">
+                    <img src="images/imageF9.jpg" alt="" />
+                </div>
+                <div class="iteme iteme10">
+                    <img src="images/imageF10.jpg" alt="" />
+                </div>
+                <div class="iteme iteme11">
+                    <img src="images/imageF11.png" alt="" />
+                </div>
+                <div class="iteme iteme12">
+                    <img src="images/imageF12.jpg" alt="" />
+                </div>
+                <div class="iteme iteme13">
+                    <img src="images/imageF13.jpg" alt="" />
+                </div>
+                <div class="iteme iteme14">
+                    <img src="images/imageF14.jpg" alt="" />
+                </div>
+                <div class="iteme iteme15">
+                    <img src="images/imageF15.jpg" alt="" />
+                </div>
+                <div class="iteme iteme16">
+                    <img src="images/imageF16.jpg" alt="" />
+                </div>
+                <div class="iteme iteme17">
+                    <img src="images/imageF17.jpg" alt="" />
+                </div>
+                <div class="iteme iteme18">
+                    <img src="images/imageF18.jpg" alt="" />
+                </div>
+                <div class="iteme iteme19">
+                    <img src="images/imageF19.jpg" alt="" />
+                </div>
+                <div class="iteme iteme20">
+                    <img src="images/imageF20.png" alt="" />
+                </div>
+                <div class="iteme iteme21">
+                    <img src="images/imageF21.jpg" alt="" />
+                </div>
+              </div>
+            </section>
+            
+            <section class="contact" id="contact">
+                <div class="titre noir">
+                    <h2 class="titre-text" data-lang-fr="Contact" data-lang-en="Contact" data-lang-ar="اتصال"><span>C</span>ontact</h2>
+                    <p data-lang-fr="AGROSEED est dédiée à fournir des solutions agricoles innovantes adaptées à vos besoins. Contactez-nous pour découvrir nos produits, obtenir un support technique, ou discuter de vos objectifs agricoles. Ensemble, faisons avancer une agriculture durable et productive." data-lang-en="AGROSEED is dedicated to providing innovative agricultural solutions tailored to your needs. Contact us to discover our products, get technical support, or discuss your agricultural goals. Together, let's advance sustainable and productive agriculture." data-lang-ar="تكرس AGROSEED لتقديم حلول زراعية مبتكرة مصممة لتلبية احتياجاتك. اتصل بنا لاكتشاف منتجاتنا أو الحصول على دعم فني أو مناقشة أهدافك الزراعية. معًا، دعونا نتقدم بالزراعة المستدامة والمنتجة.">AGROSEED est dédiée à fournir des solutions agricoles innovantes adaptées à vos besoins. Contactez-nous pour découvrir nos produits, obtenir un support technique, ou discuter de vos objectifs agricoles. Ensemble, faisons avancer une agriculture durable et productive.</p>
+                </div>
+                <div class="contactform">
+                    <h3 data-lang-fr="Envoyer un message" data-lang-en="Send a message" data-lang-ar="إرسال رسالة">Envoyer un message</h3>
+                    <div class="inputboite">
+                        <textarea placeholder="Nom" data-lang-fr="Nom" data-lang-en="Name" data-lang-ar="الاسم"></textarea>
+                    </div>
+                    <div class="inputboite">
+                        <textarea placeholder="Email" data-lang-fr="Email" data-lang-en="Email" data-lang-ar="البريدالإلكتروني"></textarea>
+                    </div>
+                    <div class="inputboite">
+                        <textarea placeholder="Message" data-lang-fr="Message" data-lang-en="Message" data-lang-ar="رسالة"></textarea>
+                    </div>
+                    <div class="inputboite">
+                        <input type="submit" value="Envoyer" data-lang-fr="Envoyer" data-lang-en="Send" data-lang-ar="إرسال">
+                    </div>
+                </div>
+             </div>
+           </div>
+            </section>
+        
+                <!-- Footer Section -->
+            <!-- Footer Section -->
+        <footer>
+            <div class="section_container">
+                <div class="footer_section">
+                    <div class="footer_logo">
+                        <a href="index.html">
+                            <img src="images/logo.png">
+                        </a>
+                    </div>
+        
+                    <div class="contact_us">
+                        <h3 data-lang-fr="Contact" data-lang-en="Contact" data-lang-ar="اتصال">Contact</h3>
+                        <ul>
+                            <li>
+                                <i class='bx bx-current-location'></i> 
+                                <span data-lang-fr="Rue des frères Boussalem Douera Alger" data-lang-en="Rue des frères Boussalem Douera Alger" data-lang-ar="شارع الإخوة بوسالم دويرة الجزائر">Rue des frères Boussalem Douera Alger</span></li>
+                            <li><i class='bx bxs-phone-call'></i> <span data-lang-fr="+213 23328021/23" data-lang-en="+213 23328021/23" data-lang-ar="+213 23328021/23">+213 23328021/23</span></li>
+                            <li><i class='bx bxs-time-five'></i> <span data-lang-fr="Dim.-Jeu. : 08:00 - 17:00" data-lang-en="Sun.-Thu. : 08:00 - 17:00" data-lang-ar="الأحد-الخميس : 08:00 - 17:00">Dim.-Jeu. : 08:00 - 17:00</span></li>
+                        </ul>
+                    </div>
+        
+                    <div class="follow_us">
+                        <h3 data-lang-fr="Suivrez Nous" data-lang-en="Follow Us" data-lang-ar="تابعنا">Suivrez Nous</h3>
+                        <a href="https://www.facebook.com/sarlagroseed16/?locale=fr_FR" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
+                        <a href="https://www.linkedin.com/in/agroseed-undefined-ba98a3328/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+                    </div>                      
+                </div>
+            </div>
+        </footer>
+        <div class="copyright">
+            <p data-lang-fr="copyright 2024 AGROSEED Tous droits reservé." data-lang-en="copyright 2024 AGROSEED All rights reserved." data-lang-ar="حقوق الطبع والنشر 2024 AGROSEED جميع الحقوق محفوظة.">copyright 2024 <a href="#">AGROSEED</a> Tous droits reservé.</p>
+        </div>
+        
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="pageProduit2.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const categoriesScroller = document.getElementById('categories');
+        const subcategoriesScroller = document.getElementById('subcategories');
+        const subsubcategoriesScroller = document.getElementById('subsubcategories');
+    
+        function selectItem(scroller, selectedItem) {
+            const items = scroller.querySelectorAll('.item');
+            items.forEach(item => item.classList.remove('active'));
+            selectedItem.classList.add('active');
+        }
+    
+        function showFicheTechnique(pdfUrl) {
+            console.log("Opening PDF:", pdfUrl);
+            if (pdfUrl) {
+                window.open(pdfUrl, '_blank');
+            } else {
+                console.error("No PDF URL provided");
+            }
+        }
+    
+        function handleSelection(scroller) {
+            scroller.addEventListener('click', function(event) {
+                if (event.target.tagName === 'IMG') {
+                    selectItem(scroller, event.target.parentNode);
+                    if (scroller === categoriesScroller) {
+                        const selectedCategory = event.target.parentNode;
+                        const categoryTitle = selectedCategory.querySelector('span').innerText;
+                        fillSubcategories(categoryTitle);
+                    } else if (scroller === subcategoriesScroller) {
+                        const selectedSubcategory = event.target.parentNode;
+                        const subcategoryTitle = selectedSubcategory.querySelector('span').innerText;
+                        fillSubSubcategories(subcategoryTitle);
+                    } else {
+                        const selectedSubsubcategory = event.target.parentNode;
+                        const subsubcategoryPdf = selectedSubsubcategory.querySelector('span').dataset.pdf;
+                        showFicheTechnique(subsubcategoryPdf);
+                    }
+                }
+            });
+        }
+    
+        function fillSubcategories(categoryName) {
+            const category = subcategoriesMap.find(cat => cat.name === categoryName);
+            if (category) {
+                fillScroller(subcategoriesScroller, category.subcategories);
+                subsubcategoriesScroller.innerHTML = '';
+            }
+        }
+    
+        function fillSubSubcategories(subcategoryName) {
+            const categoryName = document.querySelector('#categories .active span').innerText;
+            const category = subcategoriesMap.find(cat => cat.name === categoryName);
+            if (category) {
+                const subcategory = category.subcategories.find(subcat => subcat.name === subcategoryName);
+                if (subcategory) {
+                    fillScroller(subsubcategoriesScroller, subcategory.subsubcategories);
+                }
+            }
+        }
+    
+        function createOption(container, imgUrl, text, pdf = '') {
+            const item = document.createElement('div');
+            item.classList.add('item');
+            item.innerHTML = `<img src="${imgUrl}" alt="${text}"><span data-pdf="${pdf}">${text}</span>`;
+            container.appendChild(item);
+        }
+    
+        function fillScroller(scroller, options) {
+            scroller.innerHTML = '';
+            options.forEach(option => {
+                createOption(scroller, option.image, option.name, option.pdf);
+            });
+        }
+    
+        const subcategoriesMap = [
+            {
+                name: 'ENGRAIS SOLUBLE',
+                image: 'images/image1.jpg',
+                subcategories: [
+                    {
+                        name: 'Sous-catégorie 1',
+                        image: 'images/sub-image1.jpg',
+                        subsubcategories: [
+                            { name: 'Sous-sous-catégorie 1', image: 'images/subsub-image1.jpg', pdf: 'pdfs/sous-sous-categorie1.pdf' },
+                            { name: 'Sous-sous-catégorie 2', image: 'images/subsub-image2.jpg', pdf: 'pdfs/sous-sous-categorie2.pdf' },
+                            { name: 'Sous-sous-catégorie 3', image: 'images/subsub-image3.jpg', pdf: 'pdfs/sous-sous-categorie3.pdf' },
+                            { name: 'Sous-sous-catégorie 3', image: 'images/subsub-image6.jpg', pdf: 'pdfs/sous-sous-categorie3.pdf' },
+                            { name: 'Sous-sous-catégorie 4', image: 'images/subsub-image8.jpg', pdf: 'pdfs/sous-sous-categorie4.pdf' },
+                            { name: 'Sous-sous-catégorie 3', image: 'images/subsub-image6.jpg', pdf: 'pdfs/sous-sous-categorie3.pdf' },
+                            { name: 'Sous-sous-catégorie 4', image: 'images/subsub-image8.jpg', pdf: 'pdfs/sous-sous-categorie4.pdf' },
+                            { name: 'Sous-sous-catégorie 3', image: 'images/subsub-image6.jpg', pdf: 'pdfs/sous-sous-categorie3.pdf' },
+                            { name: 'Sous-sous-catégorie 4', image: 'images/subsub-image8.jpg', pdf: 'pdfs/sous-sous-categorie4.pdf' },
+                            { name: 'Sous-sous-catégorie 3', image: 'images/subsub-image6.jpg', pdf: 'pdfs/sous-sous-categorie3.pdf' },
+                            { name: 'Sous-sous-catégorie 4', image: 'images/subsub-image8.jpg', pdf: 'pdfs/sous-sous-categorie4.pdf' }
+                        ]
+                    },
+                    {
+                        name: 'PIMENT',
+                        image: 'images/sub-image2.jpg',
+                        subsubcategories: [
+                            { name: 'Sous-sous-catégorie 3', image: 'images/subsub-image6.jpg', pdf: 'pdfs/sous-sous-categorie3.pdf' },
+                            { name: 'Sous-sous-catégorie 4', image: 'images/subsub-image8.jpg', pdf: 'pdfs/sous-sous-categorie4.pdf' },
+                            { name: 'Sous-sous-catégorie 3', image: 'images/subsub-image6.jpg', pdf: 'pdfs/sous-sous-categorie3.pdf' },
+                            { name: 'Sous-sous-catégorie 4', image: 'images/subsub-image8.jpg', pdf: 'pdfs/sous-sous-categorie4.pdf' }
+                        ]
+                    }
+                ]
+            },
+            {
+                name: 'CORRECTEUR DE CARRENCE',
+                image: 'images/image2.jpg',
+                subcategories: [
+                    {
+                        name: 'Sous-catégorie 1',
+                        image: 'images/sub-image1.jpg',
+                        subsubcategories: [
+                            { name: 'Sous-sous-catégorie 3', image: 'images/subsub-image6.jpg', pdf: 'pdfs/sous-sous-categorie3.pdf' },
+                            { name: 'Sous-sous-catégorie 4', image: 'images/subsub-image8.jpg', pdf: 'pdfs/sous-sous-categorie4.pdf' },
+                            { name: 'Sous-sous-catégorie 3', image: 'images/subsub-image6.jpg', pdf: 'pdfs/sous-sous-categorie3.pdf' },
+                            { name: 'Sous-sous-catégorie 6', image: 'images/subsub-image6.jpg', pdf: 'pdfs/sous-sous-categorie2.pdf' }
+                        ]
+                    },
+            {
+                name: 'Catégorie 3',
+                image: 'images/image3.jpg',
+                subcategories: [
+                    {
+                        name: 'Sous-catégorie 1',
+                        image: 'images/sub-image1.jpg',
+                        subsubcategories: [
+                            { name: 'Sous-sous-catégorie 1', image: 'images/subsub-image3.jpg', pdf: 'pdfs/sous-sous-categorie1.pdf' },
+                            { name: 'Sous-sous-catégorie 2', image: 'images/subsub-image9.jpg', pdf: 'pdfs/sous-sous-categorie2.pdf' }
+                        ]
+                    }
+                ]
+            },
+                    {
+                        name: 'Sous-catégorie 2',
+                        image: 'images/sub-image9.jpg',
+                        subsubcategories: [
+                            { name: 'Sous-sous-catégorie 3', image: 'images/subsub-image6.jpg', pdf: 'pdfs/sous-sous-categorie3.pdf' },
+                            { name: 'Sous-sous-catégorie 4', image: 'images/subsub-image1.jpg', pdf: 'pdfs/sous-sous-categorie4.pdf' }
+                        ]
+                    }
+                ]
+            }
+        ];
+    
+        subcategoriesMap.forEach(category => {
+            createOption(categoriesScroller, category.image, category.name);
+        });
+    
+        handleSelection(categoriesScroller);
+        handleSelection(subcategoriesScroller);
+        handleSelection(subsubcategoriesScroller);
+    });
+</script> 
+
+</body>
+</html>

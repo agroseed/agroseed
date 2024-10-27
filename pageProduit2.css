@@ -1,0 +1,1428 @@
+/* Styles globaux */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+body, .menu {  /* Police par défaut pour tout le contenu */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+p {  /* Styles par défaut pour les paragraphes */
+  font-weight: 300;
+  color: #111;
+}
+
+/* Styles pour le header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo img {
+  width: 100px;
+  margin-bottom: -20px;
+}
+
+.logo-slogan-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px; /* Ajuster la marge si nécessaire */
+}
+
+.slogan p {
+  font-family: 'Lucida Handwriting', cursive;
+  font-size: 18px;
+  color: #008000;
+  text-align: center;
+  margin: -50px 0 0 0; /* Adjust margin to center under logo */
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* Menu Toggle Styles */
+.menuToggle {
+  display: none; /* Hidden initially for large screens */
+  font-size: 30px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1002;
+  color: #111;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.menuToggle span.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin-bottom: 5px;
+  background-color: #111;
+}
+
+/* Default Navbar Styles (Large Screens) */
+.navbar {
+  display: flex;
+}
+
+.navbar li {
+  list-style: none;
+  margin-left: 30px;
+}
+
+.navbar a {
+  color: #008000;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.btn-reserve {
+  padding: 10px 20px;
+  background: #fb911f;
+  margin-top: -10px;
+  text-transform: uppercase;
+}
+
+.btn-reserve:hover {
+  background: #d87710;
+  transition: ease-out;
+}
+
+header .navbar li a:hover {
+  color: #fb911f;
+  border-bottom: 2px solid #fb911f;
+}
+
+/* Responsive Navbar Styles (Small Screens) */
+@media (max-width: 768px) {
+  header {
+    height: auto; /* Allow header to grow as needed */
+  }
+
+  body, .menu {
+      font-family: 'Montserrat', sans-serif; /* Replace with your chosen font */
+    }      
+
+  .logo-slogan-container {
+    flex-direction: row; /* Arrange logo and slogan side-by-side */
+    align-items: flex-start; /* Align items at the top */
+    margin-right: 0; /* Remove right margin */
+  }
+
+  .slogan p {
+    margin: 0; /* Reset margin */
+  }
+
+  .navbar {
+    display: flex; /* Keep flexbox for small screens */
+    flex-direction: column; /* Stack items vertically */
+    position: absolute; /* Position off-screen initially */
+    top: 100px; /* Push menu below header */
+    left: 0;
+    width: 200px; /* Adjust width as needed */
+    background: #fff; /* Set background color */
+    transform: translateX(-100%); /* Hide menu by default */
+    transition: transform 0.3s ease-in-out; /* Add transition for smooth animation */
+  }
+
+  .navbar li {
+    padding: 10px; /* Add padding for spacing */
+  }
+
+  .navbar.show {
+    transform: translateX(0); /* Show menu when active */
+  }
+
+  /* Show menu toggle button on small screens */
+  .menuToggle {
+    display: block;
+    position: fixed; /* Fix position for better visibility */
+    top: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    z-index: 1001; /* Ensure it's above other elements */
+    cursor: pointer;
+  }
+
+  .menuToggle span.bar {
+    display: block;
+    width: 20px; /* Adjust width as needed */
+    height: 3px;
+    margin-bottom: 5px;
+    background-color: #111;
+  }
+
+  body, .menu {
+      font-family: 'Montserrat', sans-serif; /* Montserrat font for responsive menu */    
+}
+} 
+
+/* Styles généraux pour les langues */
+.lang-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 5px;
+}
+
+.lang-btn img {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 1px solid #06842c;
+}
+
+p {
+  margin-top: 20px;  /* Espacement au-dessus de chaque paragraphe */
+  margin-bottom: 20px;  /* Espacement en dessous de chaque paragraphe */
+}
+
+p {
+  display: block; /* Assure que le paragraphe est traité comme un bloc */
+  margin-top: 1em; /* Ajoute un espace en haut du paragraphe */
+  margin-bottom: 1em; /* Ajoute un espace en bas du paragraphe */
+}
+
+p {
+  text-align: justify;
+  text-justify: inter-word; /* Assure une justification plus propre entre les mots */
+}
+
+.scroller-container:first-of-type {
+  margin-top: 30px; /* Ajustez cette valeur selon vos besoins */
+}
+
+/* Début Diaporama */
+#autoWidth {
+  display: flex;  /* Ajout de flex pour aligner les enfants horizontalement */
+  flex-wrap: nowrap;  /* Évite que les éléments se retrouvent sur plusieurs lignes */
+  overflow-x: auto;  /* Permet le défilement horizontal si le contenu dépasse la largeur de l'écran */
+  list-style: none;  /* Supprime les puces de la liste */
+  padding: 0;  /* Retire le padding par défaut du ul */
+  white-space: nowrap;  /* Garde les enfants sur une seule ligne continue */
+}
+
+#autoWidth li {
+  flex: 0 0 auto;  /* Les enfants ne grandiront pas et ne rétréciront pas mais garderont leur taille automatique basée sur leur contenu */
+  display: inline-block;  /* Garantit que les éléments sont traités comme en ligne mais peuvent avoir une largeur et hauteur */
+  margin-right: 20px; /* Ajoute un peu d'espace entre chaque élément */
+}
+
+#autoWidth {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+#autoWidth::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, Opera */
+}
+
+.swiper-container {
+  position: relative; /* Assure que le positionnement absolu des enfants se réfère à ce conteneur */
+  width: 100%;
+  height: 500px;
+  margin-top: 110px; /* Espace de 50px en haut */
+
+}
+
+.swiper-slide img {
+  width: 100%; /* Largeur de l'image à 100% de la diapositive */
+  height: auto; /* Hauteur auto pour maintenir l'aspect ratio */
+  object-fit: cover; /* Couvre la diapositive, mais coupe ce qui déborde */
+}
+
+.swiper-button-prev, .swiper-button-next {
+  position: absolute;
+  top: 50%; /* Centre verticalement */
+  z-index: 10; /* S'assure que les boutons sont au-dessus des images */
+  transform: translateY(-50%); /* Décale les boutons pour qu'ils soient exactement au milieu */
+  background-image: url('path_to_your_arrow_image'); /* Optionnel: ajoutez votre propre flèche */
+  width: 50px; /* Largeur du bouton */
+  height: 50px; /* Hauteur du bouton */
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.swiper-button-prev {
+  left: 10px; /* Distance du bord gauche */
+}
+
+.swiper-button-next {
+  right: 10px; /* Distance du bord droit */
+}
+
+.swiper-button-prev, .swiper-button-next {
+  box-shadow: 0 0 8px rgba(0,0,0,0.6); /* Ajoute une ombre pour mieux voir les flèches */
+  background-color: rgba(255, 255, 255, 0.5); /* Fond légèrement blanc semi-transparent */
+}
+
+@media (max-width: 768px) {
+  .swiper-button-prev, .swiper-button-next {
+      width: 30px;
+      height: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .swiper-slide img {
+      height: 200px; /* Fixe une hauteur pour les écrans plus petits */
+  }
+
+  .swiper-container {
+    height: 220px; /* Hauteur du conteneur ajustée pour mobile */
+    margin-top: 20px; /* Espace de 20px en haut sur les petits écrans */
+  }
+}
+
+/* Style et position de la .swiper-pagination */
+.swiper-container {
+    width: 100%;
+    height: 500px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 20px; /* Ajustez selon l'espacement désiré du bas du conteneur */
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  background: white;
+  opacity: 0.6; /* Demi-transparence */
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1.0;
+  background: #007bff; /* Couleur lorsqu'un point est actif */
+}
+
+@media (max-width: 768px) {
+  .swiper-pagination {
+      bottom: 5px; /* Plus proche sur les appareils mobiles */
+  }
+  .swiper-pagination-bullet {
+      width: 8px;
+      height: 8px;
+  }
+}
+/* Fin swiper Diaporama */
+/* début slider Diaporama */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 500px; /* ou toute autre hauteur appropriée */
+    overflow: hidden;
+}
+
+.slider .slides {
+    display: flex;
+    width: 300%; /* Assurez-vous que ceci correspond à 100% * nombre d'images */
+    transition: transform 0.5s ease;
+}
+
+.slider img {
+    width: 33.333%; /* 100% divisé par le nombre d'images, ici 3 */
+    height: 100%;
+    object-fit: cover; /* Assurez-vous que les images couvrent bien tout le conteneur */
+}
+
+.swiper {
+    width: 100%;  /* Utilise toute la largeur disponible */
+    height: 900px; /* Hauteur fixe, vous pouvez l'ajuster selon vos besoins */
+}
+
+.btn-slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 2;
+}
+
+.btn-slide.prev {
+    left: 10px;
+}
+
+.btn-slide.next {
+    right: 10px;
+}
+/* Fin Diaporama */
+
+.scroller-container {
+  margin-top: 0px; /* Ajustez cette valeur pour augmenter l'espace après la pagination */
+}
+
+.swiper-pagination-bullet {
+  background: white;
+  opacity: 0.6; /* Demi-transparence */
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1.0;
+  background: #007bff; /* Couleur lorsqu'un point est actif */
+}
+
+@media (max-width: 768px) {
+  .swiper-pagination {
+      bottom: 5px; /* Plus proche sur les appareils mobiles */
+  }
+  .swiper-pagination-bullet {
+      width: 8px;
+      height: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .swiper-pagination {
+      bottom: -10px; /* Moins d'espace pour les appareils mobiles */
+  }
+  .scroller-container {
+      margin-top: 30px; /* Moins d'espace pour les appareils mobiles */
+  }
+}
+/* Fin des Sliders */
+
+/* Styles pour le premier scroller (catégories) */
+/* Applique la police et les marges par défaut au corps du document */
+.categories {
+  font-family: Arial, sans-serif; /* Police de caractères */
+  margin: 0; /* Réinitialisation des marges par défaut */
+  padding: 0; /* Réinitialisation des rembourrages par défaut */
+  }
+  
+  /* Styles pour le conteneur des catégories */
+  .categories .container {
+  align-items: center; /* Centre les éléments enfants horizontalement */
+  padding: 20px; /* Espace intérieur autour du conteneur */
+  }
+  
+    .scroller-container:first-of-type {
+        margin-top: 120px; /* Ajustez cette valeur selon vos besoins */
+  }
+  
+  /* Styles pour le conteneur du scroller */
+  /* Styles pour les scrollers */
+  .scroller {
+  display: flex;
+  overflow-x: auto; /* Défilement horizontal */
+  overflow-y: hidden; /* Masquer le défilement vertical */
+  white-space: nowrap;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 10px;
+  height: 300px; /* Ajuster la hauteur selon vos besoins */
+  background-color: #ffffff; /* Ajoutez cette ligne pour rendre le fond blanc */
+  }
+  
+  /* Styles pour chaque élément de catégorie */
+  .categories .item {
+  display: inline-block; /* Affichage en ligne avec bloc */
+  margin-right: 10px; /* Marge à droite pour l'espacement entre les éléments */
+  text-align: center; /* Centrage du texte */
+  cursor: pointer; /* Curseur pointeur au survol */
+  }
+  
+  /* Styles pour les images des catégories */
+  .categories .item img {
+  border: 0px solid blue; /* Bordure de 2 pixels solide bleue */
+  border-radius: 0%; /* Coins arrondis pour créer un cercle */
+  width: 250px; /* Largeur fixe pour les images */
+  height: 250px; /* Hauteur fixe pour les images */
+  transition: border-color 0.3s, transform 0.3s; /* Effet de transition pour la bordure et la transformation */
+  }
+  
+  /* Styles pour le texte des catégories */
+  .categories .item span {
+  display: block; /* Affichage en tant que bloc */
+  }
+  
+  .categories .scroller {
+  display: flex;
+  overflow-y: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Cache la barre de défilement Firefox */
+  -ms-overflow-style: none; /* Cache la barre de défilement IE et Edge */
+  }
+  
+  .categories .scroller::-webkit-scrollbar {
+  display: none; /* Cache la barre de défilement Chrome/Safari */
+  }
+  
+  /* Styles pour le premier scroller (catégories) */
+  .categories .scroller .item:last-child {
+  margin-right: 0; /* Ajustement pour le dernier élément */
+  }
+  
+  .item {
+  display: inline-block;
+  margin-right: 10px;
+  text-align: center;
+  cursor: pointer;
+  }
+  
+  /* Supprimer le carré parasite autour des images */
+  .item img {
+  border: 2px solid blue;
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  transition: border-color 0.3s, transform 0.3s;
+  }
+  
+  /* Styles pour le deuxième scroller (sous-catégories) */
+  
+  .subcategories {
+  font-family: Arial, sans-serif; /* Police de caractères */
+  margin: 0; /* Réinitialisation des marges par défaut */
+  padding: 0; /* Réinitialisation des rembourrages par défaut */
+  }
+  
+  /* Styles pour le conteneur des catégories */
+  .subcategories .container {
+  align-items: center; /* Centre les éléments enfants horizontalement */
+  padding: 20px; /* Espace intérieur autour du conteneur */
+  }
+  
+  
+  /* Styles pour le deuxième scroller (sous-catégories) */
+  .subcategories .scroller .item:hover img {
+  border-color: black; /* Changer la couleur de la bordure au survol */
+  }
+  
+  .subcategories .scroller .item:hover span {
+  color: black; /* Changer la couleur du texte au survol */
+  }
+  
+  .subcategories .scroller .item.active img {
+  border-color: red; /* Bordure rouge pour les éléments actifs */
+  }
+  
+  .subcategories .scroller .item.active span {
+  color: red; /* Couleur du texte rouge pour les éléments actifs */
+  }
+  
+  .subcategories .scroller .item:hover img {
+  transform: scale(1.2); /* Animation au survol des images de sous-catégories */
+  }
+  
+  /* Styles pour chaque élément de catégorie */
+  .subcategories .item {
+  display: inline-block; /* Affichage en ligne avec bloc */
+  margin-right: 10px; /* Marge à droite pour l'espacement entre les éléments */
+  text-align: center; /* Centrage du texte */
+  cursor: pointer; /* Curseur pointeur au survol */
+  }
+  
+  /* Styles pour les images des catégories */
+  .subcategories .item img {
+  border: 0px solid orange; /* Bordure de 2 pixels solide bleue */
+  border-radius: 0%; /* Coins arrondis pour créer un cercle */
+  width: 250px; /* Largeur fixe pour les images */
+  height: 250px; /* Hauteur fixe pour les images */
+  transition: border-color 0.3s, transform 0.3s; /* Effet de transition pour la bordure et la transformation */
+  }
+  
+  /* Styles pour le texte des catégories */
+  .subcategories .item span {
+  display: block; /* Affichage en tant que bloc */
+  }
+  
+  .subcategories .scroller {
+  display: flex;
+  overflow-y: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Cache la barre de défilement Firefox */
+  -ms-overflow-style: none; /* Cache la barre de défilement IE et Edge */
+  }
+  
+  .subcategories .scroller::-webkit-scrollbar {
+  display: none; /* Cache la barre de défilement Chrome/Safari */
+  }
+  
+  /* Styles pour le deuxième scroller (sous-catégories) */
+  .subcategories .scroller .item:last-child {
+  margin-right: 0; /* Ajustement pour le dernier élément */
+  }
+  
+  .item {
+  display: inline-block;
+  margin-right: 10px;
+  text-align: center;
+  cursor: pointer;
+  }
+  
+  /* Supprimer le carré parasite autour des images */
+  .item img {
+  border: 0px solid blue;
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  transition: border-color 0.3s, transform 0.3s;
+  }
+  
+  /* Styles pour le troixième scroller (sous-sous-catégories) */
+  
+  .subsubcategories {
+  font-family: Arial, sans-serif; /* Police de caractères */
+  margin: 0; /* Réinitialisation des marges par défaut */
+  padding: 0; /* Réinitialisation des rembourrages par défaut */
+  }
+  
+  /* Styles pour le conteneur des catégories */
+  .subsubcategories .container {
+  align-items: center; /* Centre les éléments enfants horizontalement */
+  padding: 20px; /* Espace intérieur autour du conteneur */
+  }
+  
+  /* Styles pour chaque élément de catégorie */
+  .subsubcategories .item {
+  display: inline-block; /* Affichage en ligne avec bloc */
+  margin-right: 10px; /* Marge à droite pour l'espacement entre les éléments */
+  text-align: center; /* Centrage du texte */
+  cursor: pointer; /* Curseur pointeur au survol */
+  }
+  
+  /* Styles pour les images des catégories */
+  .subsubcategories .item img {
+  border: 0px solid green; /* Bordure de 2 pixels solide bleue */
+  border-radius: 0%; /* Coins arrondis pour créer un cercle */
+  width: 250px; /* Largeur fixe pour les images */
+  height: 250px; /* Hauteur fixe pour les images */
+  transition: border-color 0.3s, transform 0.3s; /* Effet de transition pour la bordure et la transformation */
+  }
+  
+  /* Styles pour le texte des catégories */
+  .subsubcategories .item span {
+  display: block; /* Affichage en tant que bloc */
+  }
+  
+  .subsubcategories .scroller {
+  display: flex;
+  overflow-y: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Cache la barre de défilement Firefox */
+  -ms-overflow-style: none; /* Cache la barre de défilement IE et Edge */
+  }
+  
+  .subsubcategories .scroller::-webkit-scrollbar {
+  display: none; /* Cache la barre de défilement Chrome/Safari */
+  }
+  
+  /* Styles pour le troisième scroller (sous-sous-catégories) */
+  .subsubcategories .scroller .item:last-child {
+  margin-right: 0; /* Ajustement pour le dernier élément */
+  }
+  
+  /* Ajoutez ces règles à votre CSS existant */
+  
+  /* Styles pour l'effet de survol */
+  .item:hover img {
+  border-color: black; /* Changer la couleur de la bordure au survol */
+  }
+  
+  .item:hover span {
+  color: black; /* Changer la couleur du texte au survol */
+  }
+  
+  /* Styles pour les éléments actifs (sélectionnés) */
+  .item.active img {
+  border-color: red; /* Bordure rouge pour les éléments actifs */
+  }
+  
+  .item.active span {
+  color: red; /* Couleur du texte rouge pour les éléments actifs */
+  }
+  
+  /* Animation au survol des images de sous-catégories */
+  .item:hover img {
+  transform: scale(1.2);
+  }
+  
+  /* Masquer les barres de défilement horizontales et verticales */
+  .scroller {
+  /* Masquer les barres de défilement */
+  scrollbar-width: none; /* Pour Firefox */
+  -ms-overflow-style: none; /* Pour Internet Explorer et Edge */
+  }
+  
+  /* Pour Chrome et Safari */
+  .scroller::-webkit-scrollbar {
+  display: none;
+  }
+  
+  .item {
+  display: inline-block;
+  margin-right: 10px;
+  text-align: center;
+  cursor: pointer;
+  }
+  
+  /* Supprimer le carré parasite autour des images */
+  .item img {
+  border: 2px solid blue;
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  transition: border-color 0.3s, transform 0.3s;
+  }
+  
+  .back-button {
+  position: fixed; /* Le bouton reste à une position fixe sur la page */
+  right: 20px; /* Positionné à 20px du côté droit de la page */
+  bottom: 20px; /* Positionné à 20px du bas de la page */
+  background-color: orange; /* Couleur de fond orange */
+  color: white; /* Couleur de texte blanche */
+  padding: 10px 20px; /* Padding intérieur pour agrandir le bouton */
+  text-decoration: none; /* Enlève le soulignement du texte */
+  border-radius: 5px; /* Bords arrondis */
+  font-weight: bold; /* Texte en gras */
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3); /* Ombre légère pour un effet 3D */
+  z-index: 1000; /* S'assure que le bouton est au-dessus des autres éléments */
+  }
+  
+  .item span {
+  display: block;
+  }
+  
+  /* Cache la barre de défilement pour une apparence plus propre */
+  .scroller::-webkit-scrollbar {
+  display: none;
+  }
+  
+  .scroller {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  }
+  
+  .fiche-technique-container {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    width: 80%;
+    max-width: 600px;
+    display: none;
+  }
+  
+  .fiche-technique-container img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .fiche-technique-container .download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fb911f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .fiche-technique-container .download-button:hover {
+    background-color: #d87710;
+  }
+  
+  .fiche-technique-container #closeFicheButton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  .fiche-technique-container #closeFicheButton:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Début Section Nos Fournisseurs */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0px;
+  
+  }
+  
+  .menu .titre h2 {
+    color: #008000; 
+    font-size: 2em; 
+  }
+ 
+  .wrapper {
+    width: 90%;
+    max-width: 1536px;
+    margin-inline: auto;
+    position: relative;
+    height: 110px;
+    margin-top: 5rem;
+    overflow: hidden;
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 0)
+    );
+  }
+  
+  @keyframes scrollLeft {
+    to {
+      left: -200px;
+    }
+  }
+  
+  .iteme {
+    width: 180px;
+    height: 100px;
+    background-color: white;
+    border-radius: 20px;
+    /* border: 2px solid #008000; */
+    position: absolute;
+    left: max(calc(200px * 21), 100%);
+    animation-name: scrollLeft;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  .iteme1 {
+    animation-delay: calc(30s / 21 * (21 - 1) * -1);
+  }
+  
+  .iteme2 {
+    animation-delay: calc(30s / 21 * (21 - 2) * -1);
+  }
+  
+  .iteme3 {
+    animation-delay: calc(30s / 21 * (21 - 3) * -1);
+  }
+  
+  .iteme4 {
+    animation-delay: calc(30s / 21 * (21 - 4) * -1);
+  }
+  
+  .iteme5 {
+    animation-delay: calc(30s / 21 * (21 - 5) * -1);
+  }
+  
+  .iteme6 {
+    animation-delay: calc(30s / 21 * (21 - 6) * -1);
+  }
+  
+  .iteme7 {
+    animation-delay: calc(30s / 21 * (21 - 7) * -1);
+  }
+  
+  .iteme8 {
+    animation-delay: calc(30s / 21 * (21 - 8) * -1);
+  }
+  .iteme9 {
+    animation-delay: calc(30s / 21 * (21 - 9) * -1);
+  }
+  
+  .iteme10 {
+    animation-delay: calc(30s / 21 * (21 - 10) * -1);
+  }
+  
+  .iteme11 {
+    animation-delay: calc(30s / 21 * (21 - 11) * -1);
+  }
+  
+  .iteme12 {
+    animation-delay: calc(30s / 21 * (21 - 12) * -1);
+  }
+  
+  .iteme13 {
+    animation-delay: calc(30s / 21 * (21 - 13) * -1);
+  }
+  
+  .iteme14 {
+    animation-delay: calc(30s / 21 * (21 - 14) * -1);
+  }
+  
+  .iteme15 {
+    animation-delay: calc(30s / 21 * (21 - 15) * -1);
+  }
+  
+  .iteme16 {
+    animation-delay: calc(30s / 21 * (21 - 16) * -1);
+  }
+  .iteme17 {
+    animation-delay: calc(30s / 21 * (21 - 17) * -1);
+  }
+  
+  .iteme18 {
+    animation-delay: calc(30s / 21 * (21 - 18) * -1);
+  }
+  
+  .iteme19 {
+    animation-delay: calc(30s / 21 * (21 - 19) * -1);
+  }
+  
+  .iteme20 {
+    animation-delay: calc(30s / 21 * (21 - 20) * -1);
+  }
+  
+  .iteme21 {
+    animation-delay: calc(30s / 21 * (21 - 21) * -1);
+  }
+  
+  .iteme img {
+    width: 100%; /* Permettre aux images de s'adapter à la largeur du conteneur */
+    height: auto; /* Permettre aux images de s'adapter à la hauteur du conteneur */
+  }
+  /* Fin Section Nos Fournisseurs */
+/* Début Section Contactes */
+.contact .titre .titre-text {
+  color: #008000; /*Couleur du titre Nos délégués */
+}
+
+.contact .titre-text span {
+  color: #fb911f;
+  font-size: 1.5em; /* Réduit la taille du texte pour économiser de l'espace */
+}
+
+.blanc .titre-texte,
+.blanc p {
+  color: #fff;
+}
+
+p {
+  max-width: 1100px; /* Réduit la largeur du paragraphe */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px; /* Réduit le padding */
+  padding-right: 10px;
+}
+
+.titre-text {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 2em; /* Réduit la taille du texte pour économiser de l'espace */
+}
+
+.contact {
+  background-image: url(./images/img-for.jpg);
+  background-size: cover;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8);
+  width: 90%; /* Diminue la largeur à 90% */
+  margin-left: auto; /* Centre le conteneur horizontalement */
+  margin-right: auto; /* Centre le conteneur horizontalement */
+  margin-bottom: 20px; /* Augmente l'espace en bas du conteneur */
+  padding-bottom: 50px; /* Ajoute encore plus d'espace en bas */
+  background-position: unset;
+}
+
+.contactform {
+  padding: 50px 30px;
+  background: #fff;
+  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.8);
+  max-width: 400px;
+  margin-top: 50px; /* Augmente l'espace entre le formulaire et le haut du conteneur */
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contactform .inputboite {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px; /* Réduit l'espace entre les champs */
+}
+
+.contactform h3 {
+  color: #111;
+  font-size: 1.2em; /* Réduit la taille du titre */
+  margin-bottom: 20px; /* Réduit l'espace en dessous du titre */
+}
+
+.contactform .inputboite input,
+.contactform .inputboite textarea {
+  width: 100%;
+  border: 1px solid #555;
+  padding: 10px; /* Réduit le padding interne */
+  color: #111;
+  outline: none;
+  font-size: 16px; /* Réduit la taille du texte dans les champs */
+  font-weight: 300;
+  resize: none;
+}
+
+.contactform .inputboite input[type="submit"] {
+  font-size: 1em; /* Réduit la taille du texte du bouton */
+  font-weight: 700;
+  color: #ffff;
+  background: #fb911f;
+  display: inline-block;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  outline: none;
+  border: none;
+  transition: 0.5s;
+  max-width: 120px; /* Réduit la taille du bouton */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Footer Section */
+footer{
+  background: none;
+  color: #fff;
+  padding: 0 0;
+}
+
+.footer_section{
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_section h3{
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.footer_section .footer_logo a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.footer_section .footer_logo img {
+  width: 150px; /* Ajustez cette valeur pour réduire la taille */
+  height: auto; /* Maintient les proportions de l'image */
+}
+
+.footer_section .follow_us i{
+  font-size: 40px; /* Taille des icônes */
+  margin-right: 20px; /* Espacement entre les icônes */    
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #fff; /* Couleur blanche des icônes */
+}
+
+.footer_section .follow_us i:hover{
+  transform: scale(1.3);
+  color: #b1d90e; /* Optionnel : changement de couleur lors du survol */
+}
+
+.footer_section {
+  background-image: url(./images/img-for.jpg);
+  background: #008000;
+  background-size: cover;
+  box-shadow: 2px 2px 12px rgba(0,0,0, 0.8);
+  width: 90%; /* Réduit la largeur à 90% de l'écran */
+  background-position: unset;
+  margin: 10px auto; /* Centre la section au milieu de l'écran */
+}
+
+.footer_section > div {
+  margin: 0px; /* Supprime les marges supplémentaires */
+  padding: 10px; /* Ajustez selon vos besoins pour contrôler l'espace interne */
+}
+
+.footer_section .footer_logo {
+  margin-right: 0; /* Réduit l'espace entre le logo et la prochaine section */
+  margin-left: 100px;
+}
+
+.useful_links {
+  margin-bottom: 0; /* Réduit l'espace sous les liens utiles */
+  margin-right: 100px;
+}
+
+.contact_us {
+  margin-bottom: 0; /* Réduit l'espace sous la section contact */
+}
+
+.follow_us {
+  margin-bottom: 0; /* Supprime l'espace sous la section follow */
+}
+
+.copyright {
+  padding: 3px 40px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 2px 2px 12px rgba(0,0,0, 0.8);
+  width: 90%; /* Réduit la largeur à 90% de l'écran */
+  background-position: unset;
+  margin: 20px auto; /* Centre la section au milieu de l'écran */
+  margin-bottom: 50px; /* Ajoute un espace entre la fin de la section et le bas de l'écran */
+}
+
+.copyright p:nth-child(1){
+  color: #333;
+}
+
+.copyright a {
+  color: #fb911f;
+  text-decoration: none;
+  font-weight: 600;
+  font-style: italic;
+}
+
+@media (max-width: 991px) {
+  .navbar{
+      width: 35%;
+      margin-top: 10px;
+  }
+      header, 
+  header.sticky{
+      padding: 10px 20px;
+  }
+  
+  header .navbar li{
+      margin-left: 0px;
+  }
+  
+  header .navbar li a {
+      text-decoration: none;
+      color: #008000;
+      font-size: 1em;
+      font-weight: 300;
+  }
+  
+  .logo-slogan-container {
+      display: flex; /* Use flexbox for centering */
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center items horizontally */
+      margin-right: 0; /* Remove right margin */
+    }
+  
+    .logo {
+      margin-bottom: 10px; /* Add spacing between logo and slogan */
+    }
+  
+    .slogan p {
+      margin: 0; /* Reset default margin */
+      text-align: center; /* Center text horizontally */
+    }
+  
+  section{
+      padding: 10px;
+}
+ 
+  .row .col50 img{
+      margin-left: 18%;
+  }
+  
+  .contenu p:nth-child(2){
+      font-size: 1.2em;
+  }
+  .expert{
+      margin-top: 0px;
+  }
+  
+  .menu{
+      margin-top: 0px;
+  }
+  
+  .row{
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .temoignage h2{
+      font-size: 2em;
+      text-align: center;
+  }
+  
+  .temoignage p{
+  text-align: center;
+  }
+  
+  .contactform{
+      margin-left: 25%;
+  }
+  
+      .row .col50 {
+          position: relative;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 30px;
+      
+      }
+  
+      .row{
+          flex-direction: column;
+      }
+  }
+  
+  @media (max-width: 480px)
+  {
+      .titre-text{
+          color: #000;
+          font-size: 2rem;
+          font-weight: 300;
+          text-transform: capitalize;
+      }
+  
+      .temoignage h2 
+      {
+          font-size: 2em;
+      }
+  
+      .temoignage p{
+          text-align: justify;
+      }
+      
+  }
+
+  @media (max-width: 768px) {
+    .contact {
+        width: 95%; /* Réduit encore plus la largeur sur petits écrans */
+    }
+    
+    .contactform {
+        max-width: 100%; /* Utilise toute la largeur disponible sur petits écrans */
+        padding: 50px 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact {
+        width: 100%; /* Occupe toute la largeur sur les très petits écrans */
+    }
+
+    .contactform {
+        padding: 30px 15px;
+    }
+}
+
+  /* Ajouter ces codes pour supprimer la barre de défilement horizontal et fixer la page horizontalement */
+
+/* Assurez-vous que le viewport n'a pas de défilement horizontal */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Empêche le défilement horizontal */
+  font-family: 'Poppins', sans-serif;
+}
+
+header, section, .scroller-container, .wrapper {
+  max-width: 100%; /* Empêche les débordements horizontaux */
+}
+
+img {
+  max-width: 100%; /* Les images s'adaptent à leur conteneur */
+  height: auto; /* Maintient les proportions des images */
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap; /* Permet aux éléments de se réorganiser pour éviter les débordements */
+  justify-content: center; /* Centrer les éléments */
+  gap: 20px; /* Ajouter un espace entre les éléments */
+}
+
+.scroller-container {
+  width: 100%; /* Limite la largeur à celle de l'écran */
+  overflow-x: auto; /* Si nécessaire, permettre un défilement horizontal dans certains conteneurs */
+}
+  
+/* Media Query */
+
+@media screen and (max-width: 1024px) {
+  .section_container{
+      width: 100%;
+      padding: 0 5%;
+  }
+
+  nav{
+      padding: 0 24px;
+  }
+
+  label .menu_btn{
+      display: block;
+  }
+
+  nav ul{
+      display: block;
+      background-color: #fff;
+      position: absolute;
+      top: 80px;
+      left: -100%;
+      width: 100%;
+      height: 100vh;
+      text-align: center;
+      transition: all 0.4s ease;
+  }
+
+  #click:checked ~ ul{
+      left: 0;
+  }
+
+  #click:checked ~ label .close_btn{
+      display: block;
+  }
+
+  #click:checked ~ label .menu_btn{
+      display: none;
+  }
+
+  nav ul li{
+      display: block;
+      padding: 8px 12px;
+      width: 48%;
+      margin: 24px auto;
+  }
+
+  nav ul li a{
+      color: #1b1b1b;
+  }
+
+  .hero_container{
+      flex-direction: column-reverse;
+      align-items: center;
+      padding-bottom: 32px;
+  }
+
+  .hero_container .imgae_section img{
+      width: 80%;
+      align-items: center;
+  }
+
+  .hero_container .text_section{
+      max-width: 100%;
+  }
+
+  .about_container{
+      flex-direction: column;
+  }
+
+  .about_container .text_section{
+      max-width: 100%;
+  }
+
+  .about_container .text_section p{
+      text-align: justify;
+  }
+
+  .section_container .services_items{
+      width: calc(100% / 2 - 32px);
+  }
+
+  .why_us .why_container{
+      flex-direction: column;
+  }
+
+  .why_container .why_items{
+      width: 100%;
+  }
+
+  .gallery_container .gallery_items{
+      width: calc(100% / 2 - 32px);
+  }
+
+  .contact_container{
+      flex-direction: column-reverse;
+  }
+
+  .contact_text .contact_items{
+      margin: 10px 0;
+  }
+
+  .contact_container .contact_form{
+      max-width: 100%;
+  }
+
+  .footer_section{
+      flex-direction: column;
+      gap: 24px;
+  }
+
+  .footer_section .useful_links{
+      text-align: start;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  nav{
+      padding: 0 14px;
+  }
+
+  .hero_section{
+      height: calc(80vh - 80px);
+  }
+
+  .hero_container .text_section h2{
+      font-size: 32px;
+  }
+
+  .hero_container .text_section h3{
+      font-size: 28px;
+  }
+
+  .button{
+      padding: 8px 16px;
+      font-size: 14px;
+  }
+
+  .section_container .services_items{
+      width: 100%;
+  }
+
+  .gallery_container .gallery_items{
+      width: 100%;
+  }
+}

@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lien vers la feuille de style de Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!--Lien vers les icones-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>     
+    <title>Agroseed Originale
+    </title>
+</head>
+<body>
+
+    <header>
+        <div class="logo-slogan-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo">
+            </div>
+            <div class="slogan">
+                <p data-lang-fr="Cultiver le succès ensemble" data-lang-en="Cultivating success together" data-lang-ar="لــنزرع النجــاح معًــا">Cultiver le succès ensemble</p>
+            </div>
+        </div>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html#banniere" data-lang-fr="Accueil" data-lang-en="Home" data-lang-ar="الصفحة الرئيسية">Accueil</a></li>
+                <li><a href="index.html#apropos" data-lang-fr="A propos De Nous" data-lang-en="About Us" data-lang-ar="معلومات عنا">A propos De Nous</a></li>
+                <li><a href="index.html#menu" data-lang-fr="Nos Produits" data-lang-en="Our Products" data-lang-ar="منتجاتنا">Nos Produits</a></li>
+                <li><a href="index.html#expert" data-lang-fr="Nos Délégués" data-lang-en="Our Delegates" data-lang-ar="مندوبينا">Nos Délégués</a></li>
+                <li><a href="index.html#temoignage" data-lang-fr="Temoignage" data-lang-en="Testimonial" data-lang-ar="شهادة">Temoignage</a></li>
+                <li><a href="index.html#contact" data-lang-fr="Contact" data-lang-en="Contact" data-lang-ar="اتصال">Contact</a></li>
+                <li>
+                    <button class="lang-btn" onclick="changeLanguage('fr')">
+                        <img src="images/france-flag.jpg" alt="Français">
+                    </button>
+                    <button class="lang-btn" onclick="changeLanguage('en')">
+                        <img src="images/uk-flag.jpg" alt="English">
+                    </button>
+                    <button class="lang-btn" onclick="changeLanguage('ar')">
+                        <img src="images/algeria-flag.jpg.jpg" alt="العربية">
+                    </button>
+                </li>
+            </ul>
+        </nav>
+        <button class="menuToggle" aria-label="Open Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </header>
+             
+    <section class="banniere" id="banniere">
+        <div class="video-container">
+            <video autoplay loop muted playsinline>
+                <source src="images/1_output.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="contenu">
+            <h2 data-lang-fr='"Semons le Succès"' data-lang-en='Sowing Success' data-lang-ar='لــنزرع النجــاح'>Semons le Succès</h2>
+            <p data-lang-fr="Chez AGROSEED, notre dévouement pour une agriculture de qualité se traduit par la sélection et la distribution d'intrants agricoles supérieurs. Chaque semence plantée incarne notre engagement envers une récolte abondante et respectueuse de l'environnement." data-lang-en="At AGROSEED, our commitment to quality agriculture is reflected in the selection and distribution of superior agricultural inputs. Every seed planted embodies our commitment to a bountiful and environmentally friendly harvest." data-lang-ar="في AGROSEED ، ينعكس التزامنا بالزراعة عالية الجودة في اختيار وتوزيع المدخلات الزراعية المتفوقة. كل بذرة تُزرع تجسد التزامنا بحصاد وفير وصديق للبيئة.">Chez AGROSEED, notre dévouement pour une agriculture de qualité se traduit par la sélection et la distribution d'intrants agricoles supérieurs. Chaque semence plantée incarne notre engagement envers une récolte abondante et respectueuse de l'environnement.</p>
+        </div>
+    </section>
+
+    <section class="apropos" id="apropos">
+        <div class="row">
+            <div class="col50">
+                <h2 class="titre-texte" data-lang-fr="A Propos De Nous" data-lang-en="About Us" data-lang-ar="معلومات عنا"><span>A</span> Propos De Nous</h2>
+                <p data-lang-fr="AGROSEED est une entreprise algérienne créée par des professionnels dans le monde de l’agriculture. Sa mission principale est le soutien et l’appui technique aux agriculteurs." data-lang-en="AGROSEED is an Algerian company founded by professionals in the field of agriculture. Its main mission is to support and provide technical assistance to farmers." data-lang-ar="AGROSEED هي شركة جزائرية أسسها محترفون في مجال الزراعة. مهمتها الرئيسية هي دعم وتقديم المساعدة الفنية للمزارعين.">AGROSEED est une entreprise algérienne créée par des professionnels dans le monde de l’agriculture. Sa mission principale est le soutien et l’appui technique aux agriculteurs.</p>
+                <p data-lang-fr="AGROSEED met en œuvre tout son savoir-faire pour satisfaire ses clients en proposant une large gamme de produits phytosanitaires, engrais, semences potagères et fourragères, plants de fraises ou encore matériel agricole." data-lang-en="AGROSEED uses all its expertise to satisfy its customers by offering a wide range of phytosanitary products, fertilizers, vegetable and forage seeds, strawberry plants, and agricultural equipment." data-lang-ar="تستخدم AGROSEED كل خبرتها لإرضاء عملائها من خلال تقديم مجموعة واسعة من المنتجات الصحية للنباتات والأسمدة وبذور الخضروات والأعلاف ونباتات الفراولة والمعدات الزراعية.">AGROSEED met en œuvre tout son savoir-faire pour satisfaire ses clients en proposant une large gamme de produits phytosanitaires, engrais, semences potagères et fourragères, plants de fraises ou encore matériel agricole.</p>
+                <p data-lang-fr="Aujourd’hui, AGROSEED est présente sur l’ensemble du territoire nationale avec un réseau de distribution très efficace. Plus de 30 ingénieurs agronomes répartis entre services commercial, technique et marketing se sont engagés à vous accompagner dans vos projets agricoles en vous conseillant et vous proposant des solutions adaptées à vos besoins." data-lang-en="Today, AGROSEED is present throughout the national territory with a very efficient distribution network. More than 30 agronomists spread across commercial, technical, and marketing services are committed to supporting you in your agricultural projects by advising and offering you solutions tailored to your needs." data-lang-ar="اليوم، AGROSEED موجودة في جميع أنحاء الأراضي الوطنية بشبكة توزيع فعالة للغاية. يلتزم أكثر من 30 مهندسًا زراعيًا موزعين بين الخدمات التجارية والفنية والتسويقية بدعمك في مشاريعك الزراعية من خلال تقديم المشورة والحلول المناسبة لاحتياجاتك.">Aujourd’hui, AGROSEED est présente sur l’ensemble du territoire nationale avec un réseau de distribution très efficace. Plus de 30 ingénieurs agronomes répartis entre services commercial, technique et marketing se sont engagés à vous accompagner dans vos projets agricoles en vous conseillant et vous proposant des solutions adaptées à vos besoins.</p>
+            </div>
+            <div class="col50">
+                <div class="img">
+                    <img src="./images/Agroseed.jpg" alt="image">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="menu" id="menu">
+        <div class="titre">
+    <h2 class="titre-texte" data-lang-fr="Nos Produits" data-lang-en="Our Products" data-lang-ar="منتجاتنا"><span>N</span>os Produits</h2>            
+    <p data-lang-fr="Chez AGROSEED, nous fournissons des solutions innovantes pour l'agriculture moderne. Notre gamme d'intrants agricoles est soigneusement sélectionnée pour maximiser la productivité et la durabilité des exploitations agricoles. Chaque produit que nous proposons est le résultat d'une recherche approfondie et d'une compréhension profonde des défis auxquels les agriculteurs sont confrontés aujourd'hui. En nous appuyant sur des technologies de pointe et une collaboration étroite avec des experts du secteur, nous nous engageons à offrir des produits qui non seulement nourrissent les cultures mais aussi préservent l'environnement." data-lang-en="At AGROSEED, we provide innovative solutions for modern agriculture. Our range of agricultural inputs is carefully selected to maximize the productivity and sustainability of farms. Each product we offer is the result of extensive research and a deep understanding of the challenges faced by farmers today. Relying on cutting-edge technologies and close collaboration with industry experts, we are committed to offering products that not only nourish crops but also preserve the environment." data-lang-ar="في AGROSEED، نقدم حلولًا مبتكرة للزراعة الحديثة. يتم اختيار مجموعة مدخلاتنا الزراعية بعناية لتعظيم إنتاجية واستدامة المزارع. كل منتج نقدمه هو نتيجة بحث مكثف وفهم عميق للتحديات التي يواجهها المزارعون اليوم. بالاعتماد على التقنيات المتقدمة والتعاون الوثيق مع خبراء الصناعة، نحن ملتزمون بتقديم منتجات لا تغذي المحاصيل فحسب بل تحافظ أيضًا على البيئة.">Chez AGROSEED, nous fournissons des solutions innovantes pour l'agriculture moderne. Notre gamme d'intrants agricoles est soigneusement sélectionnée pour maximiser la productivité et la durabilité des exploitations agricoles. Chaque produit que nous proposons est le résultat d'une recherche approfondie et d'une compréhension profonde des défis auxquels les agriculteurs sont confrontés aujourd'hui. En nous appuyant sur des technologies de pointe et une collaboration étroite avec des experts du secteur, nous nous engageons à offrir des produits qui non seulement nourrissent les cultures mais aussi préservent l'environnement.</p>
+        </div>
+        <div class="contenu">
+            <div class="box">
+                <div class="imbox">
+                    <img src="./images/imageP1.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3 data-lang-fr="Semences" data-lang-en="Seeds" data-lang-ar="البذور">Semences</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imbox">
+                    <img src="./images/imageP2.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3 data-lang-fr="Engrais" data-lang-en="Fertilizers" data-lang-ar="الأسمدة">Engrais</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imbox">
+                    <img src="./images/imageP3.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3 data-lang-fr="Produits phytosanitaires" data-lang-en="Phytosanitary Products" data-lang-ar="المنتجات الصحية النباتية">Produits phytosanitaires</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imbox">
+                    <img src="./images/imageP4.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3 data-lang-fr="Matériels agricoles" data-lang-en="Agricultural Equipment" data-lang-ar="معدات زراعية">Matériels agricoles</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imbox">
+                    <img src="./images/imageP5.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3 data-lang-fr="Outillages agricoles" data-lang-en="Agricultural Tools" data-lang-ar="الأدوات الزراعية">Outillages agricoles</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imbox">
+                    <img src="./images/imageP6.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3 data-lang-fr="Systèmes d'irrigation" data-lang-en="Irrigation Systems" data-lang-ar="أنظمة الري">Systèmes d'irrigation</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imbox">
+                    <img src="./images/imageP7.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3 data-lang-fr="Protections des cultures" data-lang-en="Crop Protection" data-lang-ar="حماية المحاصيل">Protections des cultures</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imbox">
+                    <img src="./images/imageP8.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3 data-lang-fr="Nos Médias" data-lang-en="Our Media" data-lang-ar="وسائل الإعلام لدينا">Nos Médias</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="expert" id="expert">
+        <div class="titre">
+            <h2 class="titre-texte" data-lang-fr="Nos Délégués" data-lang-en="Our Delegates" data-lang-ar="مندوبينا">Nos <span>D</span>élégués</h2>
+            <p data-lang-fr="Chez AGROSEED, nos délégués incarnent notre engagement envers l'excellence et l'innovation. Rigoureusement formés, ils offrent un soutien personnalisé, transformant chaque interaction en un partenariat de confiance pour maximiser la productivité agricole et préserver l'environnement." data-lang-en="At AGROSEED, our delegates embody our commitment to excellence and innovation. Rigorously trained, they offer personalized support, transforming each interaction into a trusted partnership to maximize agricultural productivity and preserve the environment." data-lang-ar="في AGROSEED، يجسد مندوبونا التزامنا بالتميز والابتكار. يتلقون تدريبًا صارمًا ويقدمون دعمًا مخصصًا، مما يحول كل تفاعل إلى شراكة موثوقة لتعظيم الإنتاجية الزراعية والحفاظ على البيئة.">Chez AGROSEED, nos délégués incarnent notre engagement envers l'excellence et l'innovation. Rigoureusement formés, ils offrent un soutien personnalisé, transformant chaque interaction en un partenariat de confiance pour maximiser la productivité agricole et préserver l'environnement.</p>
+        </div>
+        <div class="swiper myExpertSwiper">
+            <div class="swiper-wrapper">
+                <!-- Diapositive pour les experts -->
+                <div class="swiper-slide">
+                    <div class="expert-card">
+                        <img src="./images/equipe1.jpg" alt="Expert Name" class="expert-photo">
+                        <div class="expert-info">
+                            <h3 data-lang-fr="HADADI Houssem El Dine" data-lang-en="HADADI Houssem El Dine" data-lang-ar="حدادي حسام الدين">HADADI Houssem El Dine</h3>
+                            <p data-lang-fr="Délégué Technico-commercial" data-lang-en="Technical Sales Delegate" data-lang-ar="مندوب المبيعات الفنية">Délégué Technico-commercial</p>
+                            <p data-lang-fr="Région Souk Ahras / Khenchela" data-lang-en="Region Souk Ahras / Khenchela" data-lang-ar="منطقة سوق أهراس / خنشلة">Région Souk Ahras / Khenchela</p>
+                        </div>
+                        <div class="contact-icons">
+                            <a href="mailto:hadadi.houssem210@gmail.com">
+                                <img src="images/email-icon.jpg" alt="Email" style="height:24px; width:24px;">
+                            </a>
+                            <a href="tel:0561690050">
+                                <img src="images/phone-icon.jpg" alt="Phone" style="height:24px; width:24px;">
+                            </a>
+                        </div>                    
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="expert-card">
+                        <img src="./images/equipe2.jpg" alt="Expert Name" class="expert-photo">
+                        <div class="expert-info">
+                            <h3 data-lang-fr="BELARBI Abdelkader" data-lang-en="BELARBI Abdelkader" data-lang-ar="بالعربي عبد القادر">BELARBI Abdelkader</h3>
+                            <p data-lang-fr="Délégué Technico-commercial" data-lang-en="Technical Sales Delegate" data-lang-ar="مندوب المبيعات الفنية">Délégué Technico-commercial</p>
+                            <p data-lang-fr="Région Mostaghanem / Belabbas / Relizane" data-lang-en="Region Mostaghanem / Belabbas / Relizane" data-lang-ar="منطقة مستغانم / بلعباس / غليزان">Région Mostaghanem / Belabbas / Relizane</p>
+                        </div>
+                        <div class="contact-icons">
+                            <a href="mailto:kader-belarbi@hotmail.fr">
+                                <img src="images/email-icon.jpg" alt="Email" style="height:24px; width:24px;">
+                            </a>
+                            <a href="tel:0560295083">
+                                <img src="images/phone-icon.jpg" alt="Phone" style="height:24px; width:24px;">                            
+                            </a>
+                        </div> 
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="expert-card">
+                        <img src="./images/equipe7.png" alt="Expert Name" class="expert-photo">
+                        <div class="expert-info">
+                            <h3 data-lang-fr="DERDAR Abdelbasset" data-lang-en="DERDAR Abdelbasset" data-lang-ar="دردار عبد الباسط">DERDAR Abdelbasset</h3>
+                            <p data-lang-fr="Délégué Technique" data-lang-en="Technical Delegate" data-lang-ar="مندوب تقني">Délégué Technique</p>
+                            <p data-lang-fr="Région Mostaghanem / Belabbas / Relizane" data-lang-en="Region Mostaghanem / Belabbas / Relizane" data-lang-ar="منطقة مستغانم / بالعباس / غليزان">Région Mostaghanem / Belabbas / Relizane</p>
+                        </div>
+                        <div class="contact-icons">
+                            <a href="mailto:derdar.ab@gmail.com">
+                                <img src="images/email-icon.jpg" alt="Email" style="height:24px; width:24px;">                            
+                            </a>
+                            <a href="tel:0560028889">
+                                <img src="images/phone-icon.jpg" alt="Phone" style="height:24px; width:24px;">                            
+                            </a>
+                        </div> 
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="expert-card">
+                        <img src="./images/equipe3.jpg" alt="Expert Name" class="expert-photo">
+                        <div class="expert-info">
+                            <h3 data-lang-fr="MEZGHICHE Nour" data-lang-en="MEZGHICHE Nour" data-lang-ar="مزغيش نور">MEZGHICHE Nour</h3>
+                            <p data-lang-fr="Responsable Semences" data-lang-en="Seed Manager" data-lang-ar="مسؤول البذور">Responsable Semences</p>
+                            <p data-lang-fr="Direction Générale" data-lang-en="General Management" data-lang-ar="الإدارة العامة">Direction Générale</p>
+                        </div>
+                        <div class="contact-icons">
+                            <a href="mailto:agrosed.semence@gmail.com">
+                                <img src="images/email-icon.jpg" alt="Email" style="height:24px; width:24px;">
+                            </a>
+                            <a href="tel:0560944047">
+                                <img src="images/phone-icon.jpg" alt="Phone" style="height:24px; width:24px;">                            
+                            </a>
+                        </div> 
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="expert-card">
+                        <img src="./images/equipe4.png" alt="Expert Name" class="expert-photo">
+                        <div class="expert-info">
+                            <h3 data-lang-fr="ABDELGUERFI Youcef" data-lang-en="ABDELGUERFI Youcef" data-lang-ar="عبد القرفي يوسف">ABDELGUERFI Youcef</h3>
+                            <p data-lang-fr="Délégué Technique" data-lang-en="Technical Delegate" data-lang-ar="مندوب تقني">Délégué Technique</p>
+                            <p data-lang-fr="Région Alger Est / Médéa / Djelfa" data-lang-en="Region Alger East / Médéa / Djelfa" data-lang-ar="منطقة الجزائر شرق / المدية / الجلفة">Région Alger Est / Médéa / Djalfa</p>
+                        </div>
+                        <div class="contact-icons">
+                            <a href="mailto:youcefguerfi1@gmail.com">
+                                <img src="images/email-icon.jpg" alt="Email" style="height:24px; width:24px;">                            
+                            </a>
+                            <a href="tel:0560295121">
+                                <img src="images/phone-icon.jpg" alt="Phone" style="height:24px; width:24px;">                            
+                            </a>
+                        </div> 
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="expert-card">
+                        <img src="./images/equipe6.png" alt="Expert Name" class="expert-photo">
+                        <div class="expert-info">
+                            <h3 data-lang-fr="SAIDAISSOUS Samir" data-lang-en="SAIDAISSOUS Samir" data-lang-ar="سيديسوس سمير">SAIDAISSOUS Samir</h3>
+                            <p data-lang-fr="Délégué Technico-commercial" data-lang-en="Technical Sales Delegate" data-lang-ar="مندوب المبيعات الفنية">Délégué Technico-commercial</p>
+                            <p data-lang-fr="Région Skikda / Constantine" data-lang-en="Region Skikda / Constantine" data-lang-ar="منطقة سكيكدة / قسنطينة">Région Skikda / Constantine</p>
+                        </div>
+                        <div class="contact-icons">
+                            <a href="mailto:samir.sadaissous@gmail.com">
+                                <img src="images/email-icon.jpg" alt="Email" style="height:24px; width:24px;">                            
+                            </a>
+                            <a href="tel:0561696008">
+                                <img src="images/phone-icon.jpg" alt="Phone" style="height:24px; width:24px;">                            
+                            </a>
+                        </div> 
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="expert-card">
+                        <img src="./images/equipe5.jpg" alt="Expert Name" class="expert-photo">
+                        <div class="expert-info">
+                            <h3 data-lang-fr="AOAMER Adnane" data-lang-en="AOAMER Adnane" data-lang-ar=" عوامر عدنان">AOAMER Adnane</h3>
+                            <p data-lang-fr="Délégué Technico-commercial" data-lang-en="Technical Sales Delegate" data-lang-ar="مندوب المبيعات الفنية">Délégué Technico-commercial</p>
+                            <p data-lang-fr="Region Alger Ouest / Blida / " data-lang-en="Region Algiers West / Blida" data-lang-ar="منطقة الجزائر غرب / البليدة">Region Alger Ouest / Blida</p>
+                        </div>
+                        <div class="contact-icons">
+                            <a href="mailto:qdnmo2008@gmail.com">
+                                <img src="images/email-icon.jpg" alt="Email" style="height:24px; width:24px;">                            
+                            </a>
+                            <a href="tel:0561735099">
+                                <img src="images/phone-icon.jpg" alt="Phone" style="height:24px; width:24px;">                            
+                            </a>
+                        </div> 
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="expert-card">
+                        <img src="./images/equipe8.png" alt="Expert Name" class="expert-photo">
+                        <div class="expert-info">
+                            <h3 data-lang-fr="HAMDAOUI Saif Eddine" data-lang-en="HAMDAOUI Saif Eddine" data-lang-ar="  حمداوي سيف الدين">HAMDAOUI Saif Eddine</h3>
+                            <p data-lang-fr="Délégué Technico-commercial" data-lang-en="Technical Sales Delegate" data-lang-ar="مندوب المبيعات الفنية">Délégué Technico-commercial</p>
+                            <p data-lang-fr="Region El Taref " data-lang-en="Region El Taref" data-lang-ar="منطقة الطارف">Region El Taref</p>
+                        </div>
+                        <div class="contact-icons">
+                            <a href="mailto:qdnmo2008@gmail.com">
+                                <img src="images/email-icon.jpg" alt="Email" style="height:24px; width:24px;">                            
+                            </a>
+                            <a href="tel:0561735099">
+                                <img src="images/phone-icon.jpg" alt="Phone" style="height:24px; width:24px;">                            
+                            </a>
+                        </div> 
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="expert-card">
+                        <img src="./images/equipe9.png" alt="Expert Name" class="expert-photo">
+                        <div class="expert-info">
+                            <h3 data-lang-fr="MEDJAHDI Bilal" data-lang-en="MEDJAHDI Bilal" data-lang-ar=" مجاهدي بلال">MEDJAHDI Bilal</h3>
+                            <p data-lang-fr="Délégué Technique" data-lang-en="Technical Delegate" data-lang-ar="مندوب تقني">Délégué Technique</p>
+                            <p data-lang-fr="Region Ain Defla / Chelif" data-lang-en="Region Ain Defla / Chelif" data-lang-ar="منطقة عين الدفلى / الشلف">Region Ain Defla / Chelif</p>
+                        </div>
+                        <div class="contact-icons">
+                            <a href="mailto:medjahdi.b@gmail.com">
+                                <img src="images/email-icon.jpg" alt="Email" style="height:24px; width:24px;">                            
+                            </a>
+                            <a href="tel:0560295577">
+                                <img src="images/phone-icon.jpg" alt="Phone" style="height:24px; width:24px;">                            
+                            </a>
+                        </div> 
+                    </div>
+                </div>
+                <!-- Ajouter plus de diapositives pour d'autres experts ici -->
+            </div>
+        </div>
+    </section>
+
+    <section class="temoignage" id="temoignage">
+        <div class="titre blanc">
+            <h2 class="titre-texte" data-lang-fr="Que Disent Nos Clients" data-lang-en="What Our Clients Say" data-lang-ar="ماذا يقول ملائنا">Que Disent Nos <span>C</span>lients</h2>
+            <p data-lang-fr="Chez AGROSEED, la satisfaction de nos clients est au cœur de notre mission. Découvrez comment nos produits et services transforment l'agriculture à travers les témoignages de ceux qui nous font confiance. De la robustesse des cultures à l'efficacité du support technique, nos clients partagent leurs expériences et succès." data-lang-en="At AGROSEED, customer satisfaction is at the heart of our mission. Discover how our products and services are transforming agriculture through the testimonials of those who trust us. From the robustness of the crops to the efficiency of the technical support, our customers share their experiences and successes." data-lang-ar="في AGROSEED، رضا العملاء هو في صميم مهمتنا. اكتشف كيف تغير منتجاتنا وخدماتنا الزراعة من خلال شهادات أولئك الذين يثقون بنا. من قوة المحاصيل إلى كفاءة الدعم الفني، يشارك عملاؤنا تجاربهم ونجاحاتهم.">Chez AGROSEED, la satisfaction de nos clients est au cœur de notre mission. Découvrez comment nos produits et services transforment l'agriculture à travers les témoignages de ceux qui nous font confiance. De la robustesse des cultures à l'efficacité du support technique, nos clients partagent leurs expériences et succès.</p>
+        </div>
+
+        <div class="contenu">
+            <div class="box">
+                <div class="imbox">
+                    <img src="./images/t1.jpg" alt="">
+                </div>
+                <div class="text">
+                    <p data-lang-fr="Les solutions d'AGROSEED ont révolutionné notre façon de cultiver sous serres. Leur système d'irrigation goutte à goutte est parfaitement adapté à nos besoins, garantissant une distribution précise de l'eau et des nutriments directement aux racines. Les engrais liquides et les correcteurs de carences d'AGROSEED ont grandement contribué à la santé et à la vigueur de nos cultures, tout en améliorant le rendement et la qualité des produits. Grâce à AGROSEED, nous pouvons maintenant gérer nos ressources plus efficacement et avec une plus grande durabilité." data-lang-en="AGROSEED's solutions have revolutionized our greenhouse farming. Their drip irrigation system is perfectly suited to our needs, ensuring precise distribution of water and nutrients directly to the roots. AGROSEED's liquid fertilizers and deficiency correctors have greatly contributed to the health and vigor of our crops, while improving yield and product quality. Thanks to AGROSEED, we can now manage our resources more efficiently and sustainably." data-lang-ar="لقد غيرت حلول AGROSEED طريقتنا في الزراعة في البيوت المحمية. نظام الري بالتنقيط الخاص بهم يناسب احتياجاتنا تمامًا، مما يضمن التوزيع الدقيق للمياه والمغذيات مباشرة إلى الجذور. ساهمت الأسمدة السائلة والمصححات النقص من AGROSEED بشكل كبير في صحة وحيوية محاصيلنا، مع تحسين الغلة وجودة المنتجات. بفضل AGROSEED، يمكننا الآن إدارة مواردنا بشكل أكثر كفاءة واستدامة.">Les solutions d'AGROSEED ont révolutionné notre façon de cultiver sous serres. Leur système d'irrigation goutte à goutte est parfaitement adapté à nos besoins, garantissant une distribution précise de l'eau et des nutriments directement aux racines. Les engrais liquides et les correcteurs de carences d'AGROSEED ont grandement contribué à la santé et à la vigueur de nos cultures, tout en améliorant le rendement et la qualité des produits. Grâce à AGROSEED, nous pouvons maintenant gérer nos ressources plus efficacement et avec une plus grande durabilité.</p>
+                    <h3 data-lang-fr="Abdelkader DAHOU" data-lang-en="Abdelkader DAHOU" data-lang-ar=" دحوا عبد القادر">Abdelkader DAHOU</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imbox">
+                    <img src="./images/t2.jpg" alt="">
+                </div>
+                <div class="text">
+                    <p data-lang-fr="Dans la région d'Ain Defla, la culture de la pastèque et du melon nécessite une attention particulière à la qualité des semences et à la gestion de l'eau. AGROSEED nous a fourni des semences qui non seulement résistent mieux aux conditions climatiques variables, mais offrent également des fruits d'une qualité exceptionnelle. Leurs conseils en matière de fertilité du sol et de protection des cultures nous ont aidés à réduire les pertes et à améliorer la douceur et la saveur de nos melons et pastèques. Choisir AGROSEED était la meilleure décision pour notre croissance." data-lang-en="In the Ain Defla region, watermelon and melon cultivation requires special attention to seed quality and water management. AGROSEED provided us with seeds that not only better withstand variable climatic conditions but also offer exceptional fruit quality. Their advice on soil fertility and crop protection helped us reduce losses and improve the sweetness and flavor of our melons and watermelons. Choosing AGROSEED was the best decision for our growth." data-lang-ar="في منطقة عين الدفلى، تتطلب زراعة البطيخ والشمام اهتمامًا خاصًا بجودة البذور وإدارة المياه. زودتنا AGROSEED ببذور لا تتحمل الظروف المناخية المتغيرة فحسب، بل توفر أيضًا جودة استثنائية للفواكه. ساعدتنا نصائحهم بشأن خصوبة التربة وحماية المحاصيل في تقليل الخسائر وتحسين حلاوة ونكهة البطيخ والشمام لدينا. كان اختيار AGROSEED هو القرار الأفضل لنمونا.">Dans la région d'Ain Defla, la culture de la pastèque et du melon nécessite une attention particulière à la qualité des semences et à la gestion de l'eau. AGROSEED nous a fourni des semences qui non seulement résistent mieux aux conditions climatiques variables, mais offrent également des fruits d'une qualité exceptionnelle. Leurs conseils en matière de fertilité du sol et de protection des cultures nous ont aidés à réduire les pertes et à améliorer la douceur et la saveur de nos melons et pastèques. Choisir AGROSEED était la meilleure décision pour notre croissance.</p>
+                    <h3>Mohammed KARA</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imbox">
+                    <img src="./images/t3.jpg" alt="">
+                </div>
+                <div class="text">
+                    <p data-lang-fr="La culture du maïs à Adrar a été révolutionnée grâce aux semences d'AGROSEED, adaptées aux conditions arides du Sud. Les engrais liquides d'AGROSEED ont également joué un rôle clé en améliorant significativement la croissance et la santé des cultures. L'efficace gamme de produits phytosanitaires d'AGROSEED protège contre nuisibles et maladies, préservant ainsi la qualité et le rendement. Un support distinctif est offert par les délégués d'AGROSEED, dont l'expertise technique continue favorise l'optimisation des pratiques culturales. Grâce à cette collaboration, nous réussissons à prospérer malgré les défis climatiques d’Adrar." data-lang-en="Maize cultivation in Adrar has been revolutionized thanks to AGROSEED seeds, adapted to the arid conditions of the South. AGROSEED's liquid fertilizers also played a key role in significantly improving crop growth and health. AGROSEED's effective range of phytosanitary products protects against pests and diseases, thus preserving quality and yield. Distinctive support is provided by AGROSEED delegates, whose continued technical expertise promotes the optimization of farming practices. Thanks to this collaboration, we succeed in thriving despite Adrar's climatic challenges." data-lang-ar="تم ثورة زراعة الذرة في أدرار بفضل بذور AGROSEED، المتكيفة مع الظروف القاحلة في الجنوب. لعبت الأسمدة السائلة من AGROSEED أيضًا دورًا رئيسيًا في تحسين نمو وصحة المحاصيل بشكل كبير. تحمي مجموعة المنتجات الصحية النباتية الفعالة من AGROSEED ضد الآفات والأمراض، مما يحافظ على الجودة والغلة. يتم تقديم دعم مميز من قبل مندوبي AGROSEED، الذين تشجع خبرتهم التقنية المستمرة على تحسين الممارسات الزراعية. بفضل هذا التعاون، ننجح في الازدهار على الرغم من التحديات المناخية لأدرار.">La culture du maïs à Adrar a été révolutionnée grâce aux semences d'AGROSEED, adaptées aux conditions arides du Sud. Les engrais liquides d'AGROSEED ont également joué un rôle clé en améliorant significativement la croissance et la santé des cultures. L'efficace gamme de produits phytosanitaires d'AGROSEED protège contre nuisibles et maladies, préservant ainsi la qualité et le rendement. Un support distinctif est offert par les délégués d'AGROSEED, dont l'expertise technique continue favorise l'optimisation des pratiques culturales. Grâce à cette collaboration, nous réussissons à prospérer malgré les défis climatiques d’Adrar.</p>
+                    <h3>Karim YOUSFI</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+<section>
+    <section class="menu" id="menu">
+        <div class="titre">
+    <h2 class="titre-texte" data-lang-fr="Nos Fournisseurs" data-lang-en="Our Suppliers" data-lang-ar="موردينا"><span>N</span>os Fournisseurs</h2>
+<div class="wrapper">
+            <div class="item item1">
+                <img src="images/imageF1.jpg" alt="" />
+            </div>
+            <div class="item item2">
+                <img src="images/imageF2.jpg" alt="" />
+            </div>
+            <div class="item item3">
+                <img src="images/imageF3.jpeg" alt="" />
+            </div>
+            <div class="item item4">
+                <img src="images/imageF4.jpg" alt="" />
+            </div>
+            <div class="item item5">
+                <img src="images/imageF5.jpg" alt="" />
+            </div>
+            <div class="item item6">
+                <img src="images/imageF6.jpg" alt="" />
+            </div>
+            <div class="item item7">
+                <img src="images/imageF7.png" alt="" />
+            </div>
+            <div class="item item8">
+                <img src="images/imageF8.jpg" alt="" />
+            </div>
+            <div class="item item9">
+                <img src="images/imageF9.jpg" alt="" />
+            </div>
+            <div class="item item10">
+                <img src="images/imageF10.jpg" alt="" />
+            </div>
+            <div class="item item11">
+                <img src="images/imageF11.png" alt="" />
+            </div>
+            <div class="item item12">
+                <img src="images/imageF12.jpg" alt="" />
+            </div>
+            <div class="item item13">
+                <img src="images/imageF13.jpg" alt="" />
+            </div>
+            <div class="item item14">
+                <img src="images/imageF14.jpg" alt="" />
+            </div>
+            <div class="item item15">
+                <img src="images/imageF15.jpg" alt="" />
+            </div>
+            <div class="item item16">
+                <img src="images/imageF16.jpg" alt="" />
+            </div>
+            <div class="item item17">
+                <img src="images/imageF17.jpg" alt="" />
+            </div>
+            <div class="item item18">
+                <img src="images/imageF18.jpg" alt="" />
+            </div>
+            <div class="item item19">
+                <img src="images/imageF19.jpg" alt="" />
+            </div>
+            <div class="item item20">
+                <img src="images/imageF20.png" alt="" />
+            </div>
+            <div class="item item21">
+                <img src="images/imageF21.jpg" alt="" />
+            </div>
+          </div>
+        </section>
+
+        <section class="contact" id="contact">
+        <div class="titre noir">
+            <h2 class="titre-text" data-lang-fr="Contact" data-lang-en="Contact" data-lang-ar="اتصال"><span>C</span>ontact</h2>
+            <p data-lang-fr="AGROSEED est dédiée à fournir des solutions agricoles innovantes adaptées à vos besoins. Contactez-nous pour découvrir nos produits, obtenir un support technique, ou discuter de vos objectifs agricoles. Ensemble, faisons avancer une agriculture durable et productive." data-lang-en="AGROSEED is dedicated to providing innovative agricultural solutions tailored to your needs. Contact us to discover our products, get technical support, or discuss your agricultural goals. Together, let's advance sustainable and productive agriculture." data-lang-ar="تكرس AGROSEED لتقديم حلول زراعية مبتكرة مصممة لتلبية احتياجاتك. اتصل بنا لاكتشاف منتجاتنا أو الحصول على دعم فني أو مناقشة أهدافك الزراعية. معًا، دعونا نتقدم بالزراعة المستدامة والمنتجة.">AGROSEED est dédiée à fournir des solutions agricoles innovantes adaptées à vos besoins. Contactez-nous pour découvrir nos produits, obtenir un support technique, ou discuter de vos objectifs agricoles. Ensemble, faisons avancer une agriculture durable et productive.</p>
+        </div>
+        <div class="contactform">
+            <h3 data-lang-fr="Envoyer un message" data-lang-en="Send a message" data-lang-ar="إرسال رسالة">Envoyer un message</h3>
+            <div class="inputboite">
+                <textarea placeholder="Nom" data-lang-fr="Nom" data-lang-en="Name" data-lang-ar="الاسم"></textarea>
+            </div>
+            <div class="inputboite">
+                <textarea placeholder="Email" data-lang-fr="Email" data-lang-en="Email" data-lang-ar="البريدالإلكتروني"></textarea>
+            </div>
+            <div class="inputboite">
+                <textarea placeholder="Message" data-lang-fr="Message" data-lang-en="Message" data-lang-ar="رسالة"></textarea>
+            </div>
+            <div class="inputboite">
+                <input type="submit" value="Envoyer" data-lang-fr="Envoyer" data-lang-en="Send" data-lang-ar="إرسال">
+            </div>
+        </div>
+     </div>
+   </div>
+    </section>
+
+        <!-- Footer Section -->
+    <!-- Footer Section -->
+<footer>
+    <div class="section_container">
+        <div class="footer_section">
+            <div class="footer_logo">
+                <a href="index.html">
+                    <img src="images/logo.png">
+                </a>
+            </div>
+
+            <div class="contact_us">
+                <h3 data-lang-fr="Contact" data-lang-en="Contact" data-lang-ar="اتصال">Contact</h3>
+                <ul>
+                    <li>
+                        <i class='bx bx-current-location'></i> 
+                        <span data-lang-fr="Rue des frères Boussalem Douera Alger" data-lang-en="Rue des frères Boussalem Douera Alger" data-lang-ar="شارع الإخوة بوسالم دويرة الجزائر">Rue des frères Boussalem Douera Alger</span></li>
+                    <li><i class='bx bxs-phone-call'></i> <span data-lang-fr="+21323328021/23" data-lang-en="+21323328021/23" data-lang-ar="+21323328021/23">+21323328021/23</span></li>
+                    <li><i class='bx bxs-time-five'></i> <span data-lang-fr="Dim.-Jeu. : 08:00 - 17:00" data-lang-en="Sun.-Thu. : 08:00 - 17:00" data-lang-ar="الأحد-الخميس : 08:00 - 17:00">Dim.-Jeu. : 08:00 - 17:00</span></li>
+                </ul>
+            </div>
+
+            <div class="follow_us">
+                <h3 data-lang-fr="Suivrez Nous" data-lang-en="Follow Us" data-lang-ar="تابعنا">Suivrez Nous</h3>
+                <a href="https://www.facebook.com/sarlagroseed16/?locale=fr_FR" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://www.linkedin.com/in/agroseed-undefined-ba98a3328/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+            </div>                      
+        </div>
+    </div>
+</footer>
+<div class="copyright">
+    <p data-lang-fr="copyright 2024 AGROSEED Tous droits reservé." data-lang-en="copyright 2024 AGROSEED All rights reserved." data-lang-ar="حقوق الطبع والنشر 2024 AGROSEED جميع الحقوق محفوظة.">copyright 2024 <a href="#">AGROSEED</a> Tous droits reservé.</p>
+</div>
+
+   
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        const menuToggle = document.querySelector('.menuToggle'); // Select by class
+        const navbar = document.querySelector('.navbar');
+
+        menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('show');
+        });
+    </script>
+    <script type="text/javascript">
+        // Gestion du comportement "sticky" du header au défilement
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+        
+        // Fonction pour gérer le menu mobile
+        function toggleMenu() {
+            const menuToggle = document.querySelector('.menuToggle');
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        }
+    </script>
+         
+         <script>
+            // Fonction pour gérer les langues
+            function changeLanguage(lang) {
+                const elements = document.querySelectorAll('[data-lang-fr], [data-lang-en], [data-lang-ar]');
+                elements.forEach(el => {
+                    el.innerText = el.getAttribute(`data-lang-${lang}`);
+                });
+                document.documentElement.lang = lang;
+                document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+                
+                // Réinitialiser Swiper après changement de langue
+                resetExpertSwiper();
+                // Réinitialiser les événements sur les produits
+                setProductImageEvents();
+            }
+            
+            // Script pour changer dynamiquement le texte en fonction de la langue sélectionnée.
+            document.addEventListener('DOMContentLoaded', () => {
+                const titleElement = document.querySelector('.titre-texte');
+                
+                function changeLanguage(lang) {
+                    const text = titleElement.getAttribute(`data-lang-${lang}`);
+                    if (text) {
+                        titleElement.innerHTML = text;
+                    }
+                }
+            
+                // Exemple de changement de langue (initialement en français)
+                changeLanguage('fr');
+            });
+            
+            // Fonction pour réinitialiser le Swiper des experts
+            function resetExpertSwiper() {
+                // Détruire l'instance existante du Swiper des experts
+                if (typeof expertSwiper !== 'undefined') {
+                    expertSwiper.destroy(true, true);
+                }
+                
+                // Réinitialiser le Swiper avec les nouvelles options
+                expertSwiper = new Swiper('.myExpertSwiper', {
+                    loop: true,
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 20
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30
+                        }
+                    },
+                    // Ajout de la direction RTL si nécessaire
+                    rtl: document.documentElement.dir === 'rtl' ? true : false,
+                });
+            }
+            
+            // Fonction pour ajouter les événements de clic sur les images de "Nos produits"
+            function setProductImageEvents() {
+                var productImages = document.querySelectorAll('.menu .contenu .box .imbox img');
+                productImages.forEach(function(img, index) {
+                    img.addEventListener('click', function() {
+                        // Redirection vers une page de produit
+                        // Vous pouvez modifier l'URL selon le produit spécifique
+                        window.location.href = 'pageProduit' + (index + 1) + '.html';
+                    });
+                });
+            }
+            
+            // Initialisation du Swiper des experts et des événements sur les produits lorsque le contenu est chargé
+            document.addEventListener('DOMContentLoaded', function() {
+                resetExpertSwiper();  // Appel de la fonction de réinitialisation du Swiper
+                setProductImageEvents();  // Appel de la fonction pour ajouter les événements de clic sur les images
+            });
+            </script>
+            
+</body>
+</html>
